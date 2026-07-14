@@ -1,0 +1,3044 @@
+{
+  "ch100_s7000": {
+    "phase": "b1",
+    "target_orange": "Orange001",
+    "episodes": 20,
+    "successes": 6,
+    "success_rate": 0.3,
+    "prefix_valid_episodes": 20,
+    "prefix_valid_rate": 1.0,
+    "seed": 2026,
+    "action_horizon": 100,
+    "stable_plate_steps": 10,
+    "oracle_state": "oracle initialized isolated evaluation; synthetic previous oranges on plate; robot joints set from subtask dataset frame 0 when applicable",
+    "oracle_plate_offsets_m": {
+      "Orange001": [
+        0.045,
+        0.0,
+        0.045
+      ],
+      "Orange002": [
+        -0.025,
+        0.04,
+        0.045
+      ],
+      "Orange003": [
+        -0.025,
+        -0.04,
+        0.045
+      ]
+    },
+    "interpretation": "B2/B3 measure sub-policy ability under idealized prefix conditions; they are not estimates of real sequential rollout performance",
+    "checkpoint": "outputs/train/single_orange001_joint6_act_ch100_b128_s7000_train24_val6/checkpoints/007000/pretrained_model",
+    "episode_results": [
+      {
+        "episode": 0,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.0,
+            0.0,
+            5.263160705566406,
+            0.0,
+            0.0,
+            9.090909004211426
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.010340392589569092,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 1,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.9873504638671875,
+            1.470306396484375,
+            3.0791549682617188,
+            3.3856658935546875,
+            -0.9659500122070312,
+            10.65142822265625
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.005097806453704834,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 2,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.9481887817382812,
+            1.4200439453125,
+            3.0573348999023438,
+            3.4551162719726562,
+            -0.98968505859375,
+            10.648688316345215
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0027141571044921875,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 3,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.2466583251953125,
+            1.1954803466796875,
+            3.1836166381835938,
+            3.585723876953125,
+            -1.8123321533203125,
+            10.628579139709473
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.003421306610107422,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 4,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.18767547607421875,
+            1.1826629638671875,
+            3.2201614379882812,
+            3.5509567260742188,
+            -1.7657623291015625,
+            10.623102188110352
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.002242743968963623,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 5,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.6503448486328125,
+            1.299072265625,
+            3.0758132934570312,
+            3.5611953735351562,
+            -1.1905517578125,
+            10.603032112121582
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.00016993284225463867,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 6,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.24756622314453125,
+            1.1653213500976562,
+            3.2685775756835938,
+            3.519989013671875,
+            -1.8050308227539062,
+            10.61670970916748
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.16575086116790771,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 7,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.3735198974609375,
+            1.6528701782226562,
+            3.0093460083007812,
+            3.2577133178710938,
+            -0.701171875,
+            10.648690223693848
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.005536913871765137,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 8,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.7551040649414062,
+            1.2800369262695312,
+            3.0904617309570312,
+            3.5830764770507812,
+            -1.1193389892578125,
+            10.624947547912598
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.15404164791107178,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 9,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.4309158325195312,
+            1.6156158447265625,
+            3.0167236328125,
+            3.2887725830078125,
+            -0.665557861328125,
+            10.638646125793457
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.008196532726287842,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 10,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.5456085205078125,
+            1.1354904174804688,
+            3.1783828735351562,
+            3.6599273681640625,
+            -1.2636032104492188,
+            10.594812393188477
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.007303118705749512,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 11,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.7742385864257812,
+            1.2599945068359375,
+            3.0923233032226562,
+            3.5940399169921875,
+            -1.104736328125,
+            10.6267728805542
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0010513663291931152,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 12,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.3598785400390625,
+            1.586212158203125,
+            3.0222625732421875,
+            3.314361572265625,
+            -0.710296630859375,
+            10.649602890014648
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.1517598032951355,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 13,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.4081344604492188,
+            1.6237640380859375,
+            3.020355224609375,
+            3.2796401977539062,
+            -0.67559814453125,
+            10.645950317382812
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.16270142793655396,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 14,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.509246826171875,
+            1.6258926391601562,
+            3.0075531005859375,
+            3.2814865112304688,
+            -0.610321044921875,
+            10.646862983703613
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.14599376916885376,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 15,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.450958251953125,
+            1.6092910766601562,
+            3.011260986328125,
+            3.3106918334960938,
+            -0.644561767578125,
+            10.63864517211914
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.007877528667449951,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 16,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.04534149169921875,
+            1.0136947631835938,
+            3.3821487426757812,
+            3.576446533203125,
+            -1.6662445068359375,
+            10.613061904907227
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0032917261123657227,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 17,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.9354476928710938,
+            1.4127273559570312,
+            3.0482330322265625,
+            3.4697418212890625,
+            -0.9979095458984375,
+            10.651427268981934
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.15913915634155273,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 18,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.399932861328125,
+            1.640167236328125,
+            3.0166778564453125,
+            3.2631988525390625,
+            -0.6829071044921875,
+            10.643211364746094
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.008599519729614258,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 19,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.31789398193359375,
+            0.9755477905273438,
+            3.1639328002929688,
+            3.8337020874023438,
+            -1.4115142822265625,
+            10.61489486694336
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0028339624404907227,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      }
+    ]
+  },
+  "ch25_s7000": {
+    "phase": "b1",
+    "target_orange": "Orange001",
+    "episodes": 20,
+    "successes": 4,
+    "success_rate": 0.2,
+    "prefix_valid_episodes": 20,
+    "prefix_valid_rate": 1.0,
+    "seed": 2026,
+    "action_horizon": 25,
+    "stable_plate_steps": 10,
+    "oracle_state": "oracle initialized isolated evaluation; synthetic previous oranges on plate; robot joints set from subtask dataset frame 0 when applicable",
+    "oracle_plate_offsets_m": {
+      "Orange001": [
+        0.045,
+        0.0,
+        0.045
+      ],
+      "Orange002": [
+        -0.025,
+        0.04,
+        0.045
+      ],
+      "Orange003": [
+        -0.025,
+        -0.04,
+        0.045
+      ]
+    },
+    "interpretation": "B2/B3 measure sub-policy ability under idealized prefix conditions; they are not estimates of real sequential rollout performance",
+    "checkpoint": "outputs/train/single_orange001_joint6_act_ch25_b128_s7000_train24_val6/checkpoints/007000/pretrained_model",
+    "episode_results": [
+      {
+        "episode": 0,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.0,
+            0.0,
+            5.263160705566406,
+            0.0,
+            0.0,
+            9.090909004211426
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.004382431507110596,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 1,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5838775634765625,
+            1.5779037475585938,
+            3.363250732421875,
+            3.0051116943359375,
+            -2.043304443359375,
+            10.615787506103516
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.008922338485717773,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 2,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.6084518432617188,
+            1.6250152587890625,
+            3.5809249877929688,
+            2.7401885986328125,
+            -2.0506057739257812,
+            10.460572242736816
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.002628505229949951,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 3,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5939102172851562,
+            1.5351791381835938,
+            3.2475433349609375,
+            3.1604080200195312,
+            -2.045135498046875,
+            10.597526550292969
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.003491997718811035,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 4,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.45843505859375,
+            1.580718994140625,
+            3.1809310913085938,
+            3.1852874755859375,
+            -1.96112060546875,
+            9.658926010131836
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.008013606071472168,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 5,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.6685638427734375,
+            1.6891937255859375,
+            3.4138946533203125,
+            2.8407821655273438,
+            -2.0889434814453125,
+            10.590221405029297
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.004612863063812256,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 6,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.19202423095703125,
+            1.2393264770507812,
+            3.0429840087890625,
+            3.6893386840820312,
+            -1.7995376586914062,
+            9.657103538513184
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.15554094314575195,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 7,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.4272537231445312,
+            1.6548538208007812,
+            3.0111541748046875,
+            3.2522354125976562,
+            -0.6591644287109375,
+            10.624950408935547
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.003427565097808838,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 8,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.6038970947265625,
+            1.5701675415039062,
+            3.6595001220703125,
+            2.7128677368164062,
+            -2.04876708984375,
+            10.56283187866211
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.004051029682159424,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 9,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5510787963867188,
+            1.4872055053710938,
+            3.6042556762695312,
+            2.8643875122070312,
+            -2.0159072875976562,
+            10.461485862731934
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0069495439529418945,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 10,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5729217529296875,
+            1.451202392578125,
+            3.8777618408203125,
+            2.6251449584960938,
+            -2.02685546875,
+            10.472442626953125
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0041397809982299805,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 11,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.605712890625,
+            1.507904052734375,
+            3.8027877807617188,
+            2.63250732421875,
+            -2.0560760498046875,
+            10.520833015441895
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 12,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.4864349365234375,
+            1.4210205078125,
+            3.2360076904296875,
+            3.290008544921875,
+            -1.9775772094726562,
+            10.613051414489746
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.005751311779022217,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 13,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5383148193359375,
+            1.6212844848632812,
+            3.5855255126953125,
+            2.734588623046875,
+            -2.0140762329101562,
+            10.418574333190918
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.004204511642456055,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 14,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.6458358764648438,
+            1.4512557983398438,
+            3.3015975952148438,
+            3.1803131103515625,
+            -2.0853042602539062,
+            9.938307762145996
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.17183643579483032,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 15,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.4837493896484375,
+            1.5966033935546875,
+            3.0240554809570312,
+            3.2997512817382812,
+            -0.61944580078125,
+            10.624037742614746
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.16909188032150269,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 16,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.448211669921875,
+            1.6622390747070312,
+            2.9855880737304688,
+            3.2650146484375,
+            -0.6500396728515625,
+            10.622210502624512
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 17,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5756759643554688,
+            1.567901611328125,
+            3.3204345703125,
+            3.0690078735351562,
+            -2.0396499633789062,
+            10.570136070251465
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.16262948513031006,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 18,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.4217987060546875,
+            1.663970947265625,
+            3.00201416015625,
+            3.2467498779296875,
+            -0.6641845703125,
+            10.626776695251465
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0059067606925964355,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 19,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5956878662109375,
+            1.5170135498046875,
+            3.8009414672851562,
+            2.630615234375,
+            -2.0451202392578125,
+            10.436833381652832
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0025434494018554688,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      }
+    ]
+  },
+  "ch50_s7000": {
+    "phase": "b1",
+    "target_orange": "Orange001",
+    "episodes": 20,
+    "successes": 4,
+    "success_rate": 0.2,
+    "prefix_valid_episodes": 20,
+    "prefix_valid_rate": 1.0,
+    "seed": 2026,
+    "action_horizon": 50,
+    "stable_plate_steps": 10,
+    "oracle_state": "oracle initialized isolated evaluation; synthetic previous oranges on plate; robot joints set from subtask dataset frame 0 when applicable",
+    "oracle_plate_offsets_m": {
+      "Orange001": [
+        0.045,
+        0.0,
+        0.045
+      ],
+      "Orange002": [
+        -0.025,
+        0.04,
+        0.045
+      ],
+      "Orange003": [
+        -0.025,
+        -0.04,
+        0.045
+      ]
+    },
+    "interpretation": "B2/B3 measure sub-policy ability under idealized prefix conditions; they are not estimates of real sequential rollout performance",
+    "checkpoint": "outputs/train/single_orange001_joint6_act_ch50_b128_s7000_train24_val6/checkpoints/007000/pretrained_model",
+    "episode_results": [
+      {
+        "episode": 0,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            0.0,
+            0.0,
+            5.263160705566406,
+            0.0,
+            0.0,
+            9.090909004211426
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 1,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.550201416015625,
+            1.4448394775390625,
+            3.2067413330078125,
+            3.2973403930664062,
+            -2.0195770263671875,
+            10.517179489135742
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.00553131103515625,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 2,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.4037628173828125,
+            1.6237640380859375,
+            3.6566619873046875,
+            2.6681900024414062,
+            -1.9245834350585938,
+            9.608257293701172
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.005083918571472168,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 3,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5711517333984375,
+            1.3609085083007812,
+            3.2014999389648438,
+            3.4085769653320312,
+            -2.045135498046875,
+            9.991265296936035
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0037320852279663086,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 4,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5474395751953125,
+            1.8151016235351562,
+            3.293182373046875,
+            2.8220748901367188,
+            -2.0195465087890625,
+            10.208575248718262
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0019217133522033691,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 5,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.4370269775390625,
+            1.339813232421875,
+            3.1832733154296875,
+            3.4214935302734375,
+            -1.9465484619140625,
+            10.602094650268555
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 6,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.582977294921875,
+            1.5315093994140625,
+            3.2475814819335938,
+            3.1803131103515625,
+            -2.045135498046875,
+            10.28070068359375
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.16368567943572998,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 7,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.3443679809570312,
+            1.62359619140625,
+            3.0185317993164062,
+            3.2723312377929688,
+            -0.7148590087890625,
+            10.632254600524902
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.004725158214569092,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 8,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.47374725341796875,
+            0.82586669921875,
+            2.9609222412109375,
+            4.177726745605469,
+            -1.9648284912109375,
+            9.710957527160645
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0044776201248168945,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 9,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.3304290771484375,
+            1.4915237426757812,
+            3.638031005859375,
+            2.8221282958984375,
+            -1.8771286010742188,
+            10.537276268005371
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.004512429237365723,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 10,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5128707885742188,
+            0.9865875244140625,
+            3.3701934814453125,
+            3.5914459228515625,
+            -1.9976730346679688,
+            10.04239559173584
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.004966855049133301,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 11,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.36098480224609375,
+            1.0603179931640625,
+            3.4440841674804688,
+            3.4449615478515625,
+            -1.8990631103515625,
+            9.806835174560547
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 12,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.42017364501953125,
+            1.27862548828125,
+            3.22357177734375,
+            3.4470901489257812,
+            -1.93011474609375,
+            10.630399703979492
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.004988372325897217,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 13,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.420135498046875,
+            1.5625381469726562,
+            3.7379531860351562,
+            2.6468963623046875,
+            -1.928253173828125,
+            10.619447708129883
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.013111293315887451,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 14,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.451568603515625,
+            1.608367919921875,
+            3.6193161010742188,
+            2.705230712890625,
+            -1.9574661254882812,
+            10.35192584991455
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.1653321385383606,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 15,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.437286376953125,
+            1.6293258666992188,
+            3.0166854858398438,
+            3.2759933471679688,
+            -0.6482086181640625,
+            10.627689361572266
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.16618603467941284,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 16,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.411773681640625,
+            1.6575469970703125,
+            3.012969970703125,
+            3.24310302734375,
+            -0.6651077270507812,
+            10.625864028930664
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 17,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": true,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.5264968872070312,
+            1.6180191040039062,
+            3.3248672485351562,
+            3.0121231079101562,
+            -2.0104293823242188,
+            10.249661445617676
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.16466033458709717,
+            "ever_stably_placed": true
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": true,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 18,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            1.307037353515625,
+            1.6216659545898438,
+            3.0295028686523438,
+            3.2631988525390625,
+            -0.7381439208984375,
+            10.638646125793457
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.007266998291015625,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      },
+      {
+        "episode": 19,
+        "phase": "b1",
+        "target_orange": "Orange001",
+        "success": false,
+        "policy_steps": 340,
+        "prefix_valid": {},
+        "oracle_check": {
+          "type": "oracle_initialized_isolated_evaluation",
+          "interpretation": "upper-bound primitive test, not a real sequential rollout",
+          "completed_oranges": [],
+          "completed_orange_placements": {},
+          "robot_start_state": {
+            "source": "standard_env_reset",
+            "target_lerobot_state": null
+          },
+          "observed_lerobot_state_after_refresh": [
+            -0.4484405517578125,
+            0.9628067016601562,
+            3.3319091796875,
+            3.6552276611328125,
+            -1.9629745483398438,
+            9.845179557800293
+          ],
+          "max_abs_lerobot_joint_state_error_after_refresh": null,
+          "camera_refresh": "front/wrist observations are rendered after teleporting prior oranges and refreshing one no-op step",
+          "distribution_caveat": "synthetic prior-orange placement may be easier or harder than real sequential rollout; use B2/B3 as ideal-prefix upper-bound tests"
+        },
+        "oranges": {
+          "Orange001": {
+            "max_lift_m": 0.0032728910446166992,
+            "ever_stably_placed": false
+          },
+          "Orange002": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          },
+          "Orange003": {
+            "max_lift_m": 0.0,
+            "ever_stably_placed": false
+          }
+        },
+        "final_in_plate": {
+          "Orange001": false,
+          "Orange002": false,
+          "Orange003": false
+        },
+        "video": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "classification_thresholds": {
+    "stable_in_plate_frames": 10,
+    "contact_or_tiny_lift_m": 0.005,
+    "partial_lift_m": 0.03,
+    "high_lift_m": 0.12,
+    "in_plate_xy_abs_m": 0.1,
+    "in_plate_z_abs_m": 0.07
+  },
+  "threshold_policy": "fixed before post-processing; do not tune per result",
+  "missing": [],
+  "records": {
+    "A0-C3": {
+      "path": "outputs/eval/joint6_long_ablation/a0_c3/summary.json",
+      "group": "a0",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.35,
+        "Orange002": 0.05,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 8,
+        "orange001_success_final_in_plate": 7,
+        "orange001_contact_or_tiny_lift": 4,
+        "orange001_partially_lifted": 1
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 7,
+      "orange001_final_in_plate": 7,
+      "orange001_mean_max_lift_m": 0.05989795625209808,
+      "orange001_max_lift_m": 0.16693174839019775,
+      "videos": []
+    },
+    "A1-C3": {
+      "path": "outputs/eval/joint6_long_ablation/a1_c3/summary.json",
+      "group": "a1",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.2,
+        "Orange002": 0.05,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 9,
+        "orange001_contact_or_tiny_lift": 6,
+        "orange001_success_final_in_plate": 4,
+        "orange001_partially_lifted": 1
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 4,
+      "orange001_final_in_plate": 4,
+      "orange001_mean_max_lift_m": 0.03816708624362945,
+      "orange001_max_lift_m": 0.15932142734527588,
+      "videos": []
+    },
+    "A2-C3": {
+      "path": "outputs/eval/joint6_long_ablation/a2_c3/summary.json",
+      "group": "a2",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.45,
+        "Orange002": 0.05,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 8,
+        "orange001_success_final_in_plate": 9,
+        "orange001_contact_or_tiny_lift": 2,
+        "orange001_partially_lifted": 1
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 9,
+      "orange001_final_in_plate": 9,
+      "orange001_mean_max_lift_m": 0.07345217764377594,
+      "orange001_max_lift_m": 0.16653740406036377,
+      "videos": []
+    },
+    "A3-C3": {
+      "path": "outputs/eval/joint6_long_ablation/a3_c3/summary.json",
+      "group": "a3",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.0,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 19,
+        "orange001_lifted_high_but_not_placed": 1
+      },
+      "failure_reasons": {
+        "Orange001_not_stably_placed": 20
+      },
+      "orange001_ever_placed": 0,
+      "orange001_final_in_plate": 0,
+      "orange001_mean_max_lift_m": 0.0075432777404785155,
+      "orange001_max_lift_m": 0.1437777280807495,
+      "videos": []
+    },
+    "A0-C4": {
+      "path": "outputs/eval/joint6_long_ablation/a0_c4/summary.json",
+      "group": "a0",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.5,
+        "Orange002": 0.1,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 8,
+        "orange001_success_final_in_plate": 9,
+        "orange001_placed_then_lost": 1,
+        "orange001_contact_or_tiny_lift": 2
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 10,
+      "orange001_final_in_plate": 9,
+      "orange001_mean_max_lift_m": 0.07822969555854797,
+      "orange001_max_lift_m": 0.16329216957092285,
+      "videos": []
+    },
+    "A1-C4": {
+      "path": "outputs/eval/joint6_long_ablation/a1_c4/summary.json",
+      "group": "a1",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.2,
+        "Orange002": 0.1,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 12,
+        "orange001_partially_lifted": 2,
+        "orange001_success_final_in_plate": 4,
+        "orange001_contact_or_tiny_lift": 2
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 4,
+      "orange001_final_in_plate": 4,
+      "orange001_mean_max_lift_m": 0.03508294820785522,
+      "orange001_max_lift_m": 0.15746033191680908,
+      "videos": []
+    },
+    "A2-C4": {
+      "path": "outputs/eval/joint6_long_ablation/a2_c4/summary.json",
+      "group": "a2",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.5,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 9,
+        "orange001_success_final_in_plate": 10,
+        "orange001_contact_or_tiny_lift": 1
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 10,
+      "orange001_final_in_plate": 10,
+      "orange001_mean_max_lift_m": 0.07845735549926758,
+      "orange001_max_lift_m": 0.16495168209075928,
+      "videos": []
+    },
+    "A3-C4": {
+      "path": "outputs/eval/joint6_long_ablation/a3_c4/summary.json",
+      "group": "a3",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.0,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 20
+      },
+      "failure_reasons": {
+        "Orange001_not_stably_placed": 20
+      },
+      "orange001_ever_placed": 0,
+      "orange001_final_in_plate": 0,
+      "orange001_mean_max_lift_m": 4.731714725494385e-05,
+      "orange001_max_lift_m": 0.000946342945098877,
+      "videos": []
+    },
+    "A0-C5": {
+      "path": "outputs/eval/joint6_long_ablation/a0_c5/summary.json",
+      "group": "a0",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.3,
+        "Orange002": 0.05,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 11,
+        "orange001_success_final_in_plate": 6,
+        "orange001_contact_or_tiny_lift": 3
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 6,
+      "orange001_final_in_plate": 6,
+      "orange001_mean_max_lift_m": 0.04950532615184784,
+      "orange001_max_lift_m": 0.16652095317840576,
+      "videos": []
+    },
+    "A1-C5": {
+      "path": "outputs/eval/joint6_long_ablation/a1_c5/summary.json",
+      "group": "a1",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.15,
+        "Orange002": 0.15,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 13,
+        "orange001_success_final_in_plate": 3,
+        "orange001_contact_or_tiny_lift": 3,
+        "orange001_partially_lifted": 1
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 3,
+      "orange001_final_in_plate": 3,
+      "orange001_mean_max_lift_m": 0.02671932876110077,
+      "orange001_max_lift_m": 0.15731561183929443,
+      "videos": []
+    },
+    "A2-C5": {
+      "path": "outputs/eval/joint6_long_ablation/a2_c5/summary.json",
+      "group": "a2",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.5,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 10,
+        "orange001_success_final_in_plate": 10
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 10,
+      "orange001_final_in_plate": 10,
+      "orange001_mean_max_lift_m": 0.07749204337596893,
+      "orange001_max_lift_m": 0.1653120517730713,
+      "videos": []
+    },
+    "A3-C5": {
+      "path": "outputs/eval/joint6_long_ablation/a3_c5/summary.json",
+      "group": "a3",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.1,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 18,
+        "orange001_success_final_in_plate": 2
+      },
+      "failure_reasons": {
+        "Orange001_not_stably_placed": 18,
+        "Orange002_not_stably_placed": 2
+      },
+      "orange001_ever_placed": 2,
+      "orange001_final_in_plate": 2,
+      "orange001_mean_max_lift_m": 0.016321235895156862,
+      "orange001_max_lift_m": 0.1632242202758789,
+      "videos": []
+    },
+    "A0-C6": {
+      "path": "outputs/eval/joint6_long_ablation/a0_c6/summary.json",
+      "group": "a0",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.4,
+        "Orange002": 0.1,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 9,
+        "orange001_success_final_in_plate": 8,
+        "orange001_contact_or_tiny_lift": 2,
+        "orange001_partially_lifted": 1
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 8,
+      "orange001_final_in_plate": 8,
+      "orange001_mean_max_lift_m": 0.06583711802959442,
+      "orange001_max_lift_m": 0.16306805610656738,
+      "videos": []
+    },
+    "A1-C6": {
+      "path": "outputs/eval/joint6_long_ablation/a1_c6/summary.json",
+      "group": "a1",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.15,
+        "Orange002": 0.1,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 12,
+        "orange001_success_final_in_plate": 3,
+        "orange001_contact_or_tiny_lift": 5
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 3,
+      "orange001_final_in_plate": 3,
+      "orange001_mean_max_lift_m": 0.02386472225189209,
+      "orange001_max_lift_m": 0.15348303318023682,
+      "videos": []
+    },
+    "A2-C6": {
+      "path": "outputs/eval/joint6_long_ablation/a2_c6/summary.json",
+      "group": "a2",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.45,
+        "Orange002": 0.05,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 10,
+        "orange001_lifted_high_but_not_placed": 1,
+        "orange001_success_final_in_plate": 9
+      },
+      "failure_reasons": {
+        "None": 20
+      },
+      "orange001_ever_placed": 9,
+      "orange001_final_in_plate": 10,
+      "orange001_mean_max_lift_m": 0.07656925916671753,
+      "orange001_max_lift_m": 0.16283905506134033,
+      "videos": []
+    },
+    "A3-C6": {
+      "path": "outputs/eval/joint6_long_ablation/a3_c6/summary.json",
+      "group": "a3",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.05,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "orange001_classes": {
+        "orange001_no_effect": 19,
+        "orange001_success_final_in_plate": 1
+      },
+      "failure_reasons": {
+        "Orange001_not_stably_placed": 19,
+        "Orange002_not_stably_placed": 1
+      },
+      "orange001_ever_placed": 1,
+      "orange001_final_in_plate": 1,
+      "orange001_mean_max_lift_m": 0.006719699501991272,
+      "orange001_max_lift_m": 0.13265979290008545,
+      "videos": []
+    }
+  }
+}

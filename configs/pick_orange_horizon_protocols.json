@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "formal_evaluation_is_automatic": false,
+  "protocols": {
+    "native_horizon": {
+      "a0_policy_actions": 1020,
+      "a1_policy_actions_per_stage": 420,
+      "a1_stages": 3,
+      "a1_total_policy_actions": 1260,
+      "sim_steps_per_action": 2,
+      "a0_simulation_steps": 2040,
+      "a1_simulation_steps": 2520,
+      "a0_theoretical_duration_s_at_60hz": 34.0,
+      "a1_theoretical_duration_s_at_60hz": 42.0,
+      "same_total_horizon": false
+    },
+    "matched_horizon": {
+      "a0_policy_actions": 1260,
+      "a1_policy_actions_per_stage": 420,
+      "a1_stages": 3,
+      "a1_total_policy_actions": 1260,
+      "sim_steps_per_action": 2,
+      "a0_simulation_steps": 2520,
+      "a1_simulation_steps": 2520,
+      "a0_theoretical_duration_s_at_60hz": 42.0,
+      "a1_theoretical_duration_s_at_60hz": 42.0,
+      "same_total_horizon": true
+    }
+  },
+  "constraints": {
+    "a1_stage_actions_must_remain": 420,
+    "reason": "B3 release may occur at policy actions 350-358; never restore the historical 340-action truncation.",
+    "output_directory_must_contain_protocol_name": true
+  }
+}

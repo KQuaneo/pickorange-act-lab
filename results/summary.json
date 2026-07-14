@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "project": "PickOrange-ACT",
+  "task": "Three-object long-horizon pick-and-place with an SO-101 arm",
+  "environment": "LeIsaac-SO101-PickOrange-v0",
+  "evaluation": {
+    "episodes_per_configuration": 20,
+    "seed": 2026,
+    "success_definition": "All three oranges are inside the plate tolerance at the final step",
+    "stable_placement_frames": 10,
+    "sim_steps_per_action": 2,
+    "native_horizon": {
+      "a0_policy_actions": 1020,
+      "a1_policy_actions": 1260,
+      "a1_stage_actions": 420,
+      "a1_stages": 3,
+      "a0_theoretical_seconds": 34.0,
+      "a1_theoretical_seconds": 42.0,
+      "same_total_horizon": false
+    },
+    "matched_horizon": {
+      "a0_policy_actions": 1260,
+      "a1_policy_actions": 1260,
+      "a1_stage_actions": 420,
+      "a1_stages": 3,
+      "a0_theoretical_seconds": 42.0,
+      "a1_theoretical_seconds": 42.0,
+      "same_total_horizon": true,
+      "enabled_by_default": false
+    }
+  },
+  "model": {
+    "policy": "ACT",
+    "vision_backbone": "ResNet-18",
+    "image_streams": ["front RGB", "wrist RGB"],
+    "action_space": "6D direct joint-position targets",
+    "chunk_size": 100,
+    "action_horizon": 100,
+    "batch_size_final": 64
+  },
+  "data": {
+    "expert_episodes": 30,
+    "fps": 30,
+    "a0": {"episodes": 30, "anchors": 35040, "full_windows": 32070, "approx_anchor_exposure": 76.71},
+    "b1": {"episodes": 30, "anchors": 9431, "full_windows": 6461, "approx_anchor_exposure": 95.01},
+    "b2": {"episodes": 30, "anchors": 11068, "full_windows": 8098, "approx_anchor_exposure": 80.95},
+    "b3": {"episodes": 28, "anchors": 11014, "full_windows": 8242, "approx_anchor_exposure": 81.35}
+  },
+  "legacy_ablation": {
+    "scope": "A0/A1/A2/A3, four checkpoints each, 20 episodes per checkpoint",
+    "full_success_observed": {"a0": 0, "a1": 0, "a2": 0, "a3": 0},
+    "best_stage_success_percent": {
+      "a0": [50, 10, 0],
+      "a1": [20, 15, 0],
+      "a2": [50, 5, 0],
+      "a3": [10, 0, 0]
+    },
+    "note": "Legacy A1 used a 340-action stage horizon and is reported separately from the corrected 420-action protocol."
+  },
+  "final_full_task": [
+    {"method": "A0", "checkpoint": "21k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.60},
+    {"method": "A1", "checkpoint": "7k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.60},
+    {"method": "A0", "checkpoint": "30k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.70},
+    {"method": "A1", "checkpoint": "10k", "successes": 2, "episodes": 20, "rate": 0.10, "wilson95": [0.028, 0.301], "mean_final_oranges": 0.65},
+    {"method": "A0", "checkpoint": "36k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.55},
+    {"method": "A1", "checkpoint": "12k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.70},
+    {"method": "A0", "checkpoint": "42k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.35},
+    {"method": "A1", "checkpoint": "14k", "successes": 3, "episodes": 20, "rate": 0.15, "wilson95": [0.052, 0.360], "mean_final_oranges": 0.75}
+  ],
+  "isolated_primitives": [
+    {"checkpoint_family": "legacy 7k", "stage": "B1", "successes": 9, "episodes": 20, "rate": 0.45},
+    {"checkpoint_family": "legacy 7k", "stage": "B2", "successes": 10, "episodes": 20, "rate": 0.50, "oracle_initialization": true},
+    {"checkpoint_family": "legacy 7k", "stage": "B3", "successes": 3, "episodes": 20, "rate": 0.15, "oracle_initialization": true},
+    {"checkpoint_family": "14k", "stage": "B1", "successes": 6, "episodes": 20, "rate": 0.30},
+    {"checkpoint_family": "14k", "stage": "B2", "successes": 9, "episodes": 20, "rate": 0.45, "oracle_initialization": true},
+    {"checkpoint_family": "14k", "stage": "B3", "successes": 6, "episodes": 20, "rate": 0.30, "oracle_initialization": true}
+  ],
+  "single_orange_horizon_sweep": [
+    {"chunk": 25, "successes": 4, "episodes": 20, "rate": 0.20},
+    {"chunk": 50, "successes": 4, "episodes": 20, "rate": 0.20},
+    {"chunk": 100, "successes": 6, "episodes": 20, "rate": 0.30}
+  ],
+  "b3_data_audit": {
+    "integrity": [30, 30],
+    "target_success": [29, 30],
+    "strict_prefix_success": [28, 30],
+    "excluded": ["target_not_stably_placed", "prefix_not_intact:Orange002"],
+    "release_after_legacy_cutoff_observed": true,
+    "release_step_range": [350, 358]
+  },
+  "orange001_failure_taxonomy": {
+    "total": 320,
+    "counts": {
+      "no_effect": 195,
+      "success_final_in_plate": 85,
+      "contact_or_tiny_lift": 30,
+      "partially_lifted": 7,
+      "lifted_high_but_not_placed": 2,
+      "placed_then_lost": 1
+    }
+  },
+  "post_success_overrun": {
+    "definition": "stage_switch_step - target_first_stably_satisfied_step",
+    "orange001": {"n": 3, "mean": 63.67, "median": 14.0, "q25": 13.0, "q75": 89.5, "prefix_destroyed": 0},
+    "orange002": {"n": 4, "mean": 89.75, "median": 87.5, "q25": 81.5, "q75": 95.75, "prefix_destroyed": 0},
+    "orange003": {"n": 7, "mean": 97.71, "median": 103.0, "q25": 27.5, "q75": 120.0, "prefix_destroyed": 0},
+    "next_stage_deviation_correlation": {"pairs": 7, "pearson_r": 0.6317523851, "interpretation": "descriptive only; no causal claim"}
+  }
+}

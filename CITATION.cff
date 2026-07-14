@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If this experiment layer is useful to your work, please cite the repository and the upstream ACT, LeIsaac, LeRobot, and Isaac Lab projects."
+title: "PickOrange-ACT: Auditable Long-Horizon Imitation Learning in LeIsaac"
+type: software
+authors:
+  - family-names: Quan
+    given-names: Yukai
+repository-code: "https://github.com/KQuaneo/pickorange-act-lab"
+license: Apache-2.0
+version: 1.0.0
+date-released: 2026-07-14
+keywords:
+  - embodied intelligence
+  - imitation learning
+  - robotics
+  - ACT
+  - Isaac Lab
+  - LeRobot

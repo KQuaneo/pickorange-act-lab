@@ -1,0 +1,619 @@
+{
+  "config": {
+    "experiment": "SO101 PickOrange joint-6 long-task ablation",
+    "task": "LeIsaac-SO101-PickOrange-v0",
+    "dataset": {
+      "episodes": 30,
+      "train_episodes": 24,
+      "validation_episodes": 6,
+      "fps": 30,
+      "task_frames": 1020,
+      "frames_per_subtask": 340,
+      "cameras": [
+        "front",
+        "wrist"
+      ],
+      "image_shape": [
+        3,
+        480,
+        640
+      ],
+      "action": "6D direct joint-position target",
+      "split_seed": 2026
+    },
+    "act": {
+      "chunk_size": 100,
+      "n_action_steps": 100,
+      "vision_backbone": "resnet18",
+      "dim_model": 512,
+      "n_heads": 8,
+      "n_encoder_layers": 4,
+      "n_decoder_layers": 1,
+      "dim_feedforward": 3200,
+      "dropout": 0.1,
+      "use_vae": true,
+      "latent_dim": 32,
+      "kl_weight": 10.0,
+      "optimizer": "AdamW",
+      "learning_rate": 1e-05,
+      "weight_decay": 0.0001,
+      "batch_size": 128,
+      "amp": true
+    },
+    "groups": {
+      "A0": {
+        "policies": 1,
+        "state_dim": 6,
+        "training_steps": 21000,
+        "checkpoints": [
+          3750,
+          7500,
+          11250,
+          15000,
+          18750,
+          21000
+        ],
+        "inference": "one policy for all 1020 steps"
+      },
+      "A1": {
+        "policies": 3,
+        "state_dim": 6,
+        "training_steps_per_policy": 7000,
+        "checkpoints_per_policy": [
+          1250,
+          2500,
+          3750,
+          5000,
+          6250,
+          7000
+        ],
+        "inference": "oracle fixed switches at steps 340 and 680"
+      },
+      "A2": {
+        "policies": 1,
+        "state_dim": 12,
+        "stage_one_hot_dim": 6,
+        "training_steps": 21000,
+        "checkpoints": [
+          3750,
+          7500,
+          11250,
+          15000,
+          18750,
+          21000
+        ],
+        "inference": "one policy with oracle six-stage one-hot"
+      },
+      "A3": {
+        "policies": 3,
+        "weights": "shared with A1",
+        "state_dim": 6,
+        "inference": "switch after current orange remains in plate for 10 steps"
+      }
+    },
+    "evaluation": {
+      "episodes": 20,
+      "seed": 2026,
+      "action_horizon": 100,
+      "simulation_steps_per_action": 2,
+      "joint_damping": 10.0,
+      "gravity_disabled": true,
+      "stable_plate_steps": 10,
+      "full_success": "all three oranges are in the plate at episode end"
+    },
+    "checkpoint_comparison": {
+      "matched_step_pairs": [
+        [
+          11250,
+          3750
+        ],
+        [
+          15000,
+          5000
+        ],
+        [
+          18750,
+          6250
+        ],
+        [
+          21000,
+          7000
+        ]
+      ],
+      "validation_metric": "fixed-seed full-split ACT train-objective loss and L1 loss on six held-out episodes",
+      "simulation_metric": "20-episode full-task and per-orange success rates",
+      "selection_policy": "report every checkpoint; do not assume the final checkpoint is best"
+    }
+  },
+  "training": {
+    "A0": {
+      "output_dir": "outputs/train/joint6_a0_full_30fps_b128_s15000_train24_val6",
+      "dataset": "local/so101_pick_orange_a0_joint6_v0",
+      "steps": 21000,
+      "batch_size": 128,
+      "seed": 1000,
+      "wandb_run_id": "rqsnj9n9",
+      "checkpoints": [
+        "003750",
+        "007500",
+        "011250",
+        "015000",
+        "018750",
+        "021000",
+        "last"
+      ]
+    },
+    "A1-001": {
+      "output_dir": "outputs/train/joint6_a1_orange001_30fps_b128_s5000_train24_val6",
+      "dataset": "local/so101_pick_orange_a1_orange001_joint6_v0",
+      "steps": 7000,
+      "batch_size": 128,
+      "seed": 1000,
+      "wandb_run_id": "3u6qm5ca",
+      "checkpoints": [
+        "001250",
+        "002500",
+        "003750",
+        "005000",
+        "006250",
+        "007000",
+        "last"
+      ]
+    },
+    "A1-002": {
+      "output_dir": "outputs/train/joint6_a1_orange002_30fps_b128_s5000_train24_val6",
+      "dataset": "local/so101_pick_orange_a1_orange002_joint6_v0",
+      "steps": 7000,
+      "batch_size": 128,
+      "seed": 1000,
+      "wandb_run_id": "i9i2e6c9",
+      "checkpoints": [
+        "001250",
+        "002500",
+        "003750",
+        "005000",
+        "006250",
+        "007000",
+        "last"
+      ]
+    },
+    "A1-003": {
+      "output_dir": "outputs/train/joint6_a1_orange003_30fps_b128_s5000_train24_val6",
+      "dataset": "local/so101_pick_orange_a1_orange003_joint6_v0",
+      "steps": 7000,
+      "batch_size": 128,
+      "seed": 1000,
+      "wandb_run_id": "36r5j6b2",
+      "checkpoints": [
+        "001250",
+        "002500",
+        "003750",
+        "005000",
+        "006250",
+        "007000",
+        "last"
+      ]
+    },
+    "A2": {
+      "output_dir": "outputs/train/joint6_a2_stage6_30fps_b128_s15000_train24_val6",
+      "dataset": "local/so101_pick_orange_a2_stage6_joint6_v0",
+      "steps": 21000,
+      "batch_size": 128,
+      "seed": 1000,
+      "wandb_run_id": "z90r03mj",
+      "checkpoints": [
+        "003750",
+        "007500",
+        "011250",
+        "015000",
+        "018750",
+        "021000",
+        "last"
+      ]
+    }
+  },
+  "validation": {
+    "A0-C3": {
+      "loss": 0.09191568396449869,
+      "l1_loss": 0.08656133230946032,
+      "kld_loss": 0.0005354351467556424
+    },
+    "A1-C3": {
+      "loss": 0.13362996544128927,
+      "l1_loss": 0.10133170455061143,
+      "kld_loss": 0.00322982608858082
+    },
+    "A2-C3": {
+      "loss": 0.09849190562963486,
+      "l1_loss": 0.0937743999575283,
+      "kld_loss": 0.00047175051534877104
+    },
+    "A3-C3": {
+      "loss": 0.13362996544128927,
+      "l1_loss": 0.10133170455061143,
+      "kld_loss": 0.00322982608858082
+    },
+    "A0-C4": {
+      "loss": 0.08357909800472603,
+      "l1_loss": 0.08014087007423631,
+      "kld_loss": 0.00034382281964949143
+    },
+    "A1-C4": {
+      "loss": 0.11559123091058793,
+      "l1_loss": 0.09407759081888822,
+      "kld_loss": 0.0021513640168396866
+    },
+    "A2-C4": {
+      "loss": 0.08938672777289658,
+      "l1_loss": 0.08588289516959705,
+      "kld_loss": 0.0003503832797172899
+    },
+    "A3-C4": {
+      "loss": 0.11559123091058793,
+      "l1_loss": 0.09407759081888822,
+      "kld_loss": 0.0021513640168396866
+    },
+    "A0-C5": {
+      "loss": 0.07670459557154209,
+      "l1_loss": 0.07420014857612793,
+      "kld_loss": 0.00025044471707219394
+    },
+    "A1-C5": {
+      "loss": 0.1021889490434547,
+      "l1_loss": 0.08736984765315368,
+      "kld_loss": 0.001481910092829197
+    },
+    "A2-C5": {
+      "loss": 0.08584004326729604,
+      "l1_loss": 0.08327866133083316,
+      "kld_loss": 0.00025613815888908564
+    },
+    "A3-C5": {
+      "loss": 0.1021889490434547,
+      "l1_loss": 0.08736984765315368,
+      "kld_loss": 0.001481910092829197
+    },
+    "A0-C6": {
+      "loss": 0.07565882114657,
+      "l1_loss": 0.07334509204853984,
+      "kld_loss": 0.00023137293535351657
+    },
+    "A1-C6": {
+      "loss": 0.09678861297228758,
+      "l1_loss": 0.08444888063164709,
+      "kld_loss": 0.001233973268882122
+    },
+    "A2-C6": {
+      "loss": 0.08264495934682345,
+      "l1_loss": 0.0804453886777552,
+      "kld_loss": 0.00021995702397772202
+    },
+    "A3-C6": {
+      "loss": 0.09678861297228758,
+      "l1_loss": 0.08444888063164709,
+      "kld_loss": 0.001233973268882122
+    }
+  },
+  "evaluation": {
+    "A0-C3": {
+      "group": "A0",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.35,
+        "Orange002": 0.05,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.05989795625209808,
+        "Orange002": 0.009515038132667542,
+        "Orange003": 0.0
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A0-C4": {
+      "group": "A0",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.5,
+        "Orange002": 0.1,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.07822969555854797,
+        "Orange002": 0.01829596161842346,
+        "Orange003": 0.008962157368659972
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A0-C5": {
+      "group": "A0",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.3,
+        "Orange002": 0.05,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.04950532615184784,
+        "Orange002": 0.009974634647369385,
+        "Orange003": 0.0
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A0-C6": {
+      "group": "A0",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.4,
+        "Orange002": 0.1,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.06583711802959442,
+        "Orange002": 0.011200165748596192,
+        "Orange003": 0.009869173169136047
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A1-C3": {
+      "group": "A1",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.2,
+        "Orange002": 0.05,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.03816708624362945,
+        "Orange002": 0.011615696549415588,
+        "Orange003": 0.021933931112289428
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A1-C4": {
+      "group": "A1",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.2,
+        "Orange002": 0.1,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.03508294820785522,
+        "Orange002": 0.020026347041130065,
+        "Orange003": 0.022277989983558656
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A1-C5": {
+      "group": "A1",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.15,
+        "Orange002": 0.15,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.02671932876110077,
+        "Orange002": 0.028437763452529907,
+        "Orange003": 0.03177385926246643
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A1-C6": {
+      "group": "A1",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.15,
+        "Orange002": 0.1,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.02386472225189209,
+        "Orange002": 0.02284385859966278,
+        "Orange003": 0.019976693391799926
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A2-C3": {
+      "group": "A2",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.45,
+        "Orange002": 0.05,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.07345217764377594,
+        "Orange002": 0.011220887303352356,
+        "Orange003": 0.0
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A2-C4": {
+      "group": "A2",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.5,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.07845735549926758,
+        "Orange002": 0.018314859271049498,
+        "Orange003": 0.0
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A2-C5": {
+      "group": "A2",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.5,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.07749204337596893,
+        "Orange002": 0.010978245735168457,
+        "Orange003": 0.0
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A2-C6": {
+      "group": "A2",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.45,
+        "Orange002": 0.05,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 1020.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.07656925916671753,
+        "Orange002": 0.01870138943195343,
+        "Orange003": 0.0
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A3-C3": {
+      "group": "A3",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.0,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 340.0,
+      "mean_max_lift_m": {
+        "Orange001": 0.0075432777404785155,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A3-C4": {
+      "group": "A3",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.0,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 340.0,
+      "mean_max_lift_m": {
+        "Orange001": 4.731714725494385e-05,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A3-C5": {
+      "group": "A3",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.1,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 366.3,
+      "mean_max_lift_m": {
+        "Orange001": 0.016321235895156862,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "mean_detector_switch_count": 0.0,
+      "stage_1_timeout_rate": 0.0,
+      "mean_time_spent_in_stage_1": 0.0
+    },
+    "A3-C6": {
+      "group": "A3",
+      "episodes": 20,
+      "successes": 0,
+      "success_rate": 0.0,
+      "stage_success_rates": {
+        "Orange001": 0.05,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "mean_policy_steps": 353.2,
+      "mean_max_lift_m": {
+        "Orange001": 0.006719699501991272,
+        "Orange002": 0.0,
+        "Orange003": 0.0
+      },
+      "mean_detector_switch_count": 0.05,
+      "stage_1_timeout_rate": 0.95,
+      "mean_time_spent_in_stage_1": 336.2
+    }
+  }
+}

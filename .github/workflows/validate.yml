@@ -1,0 +1,25 @@
+name: validate-public-artifacts
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate curated repository
+        run: python tools/validate_public_repo.py
+      - name: Run dependency-light analysis tests
+        run: python -m unittest discover -s experiments/tests -v
+      - name: Confirm charts are reproducible
+        run: |
+          python tools/render_result_charts.py
+          git diff --exit-code -- assets/final-full-task-results.svg assets/isolated-primitive-results.svg

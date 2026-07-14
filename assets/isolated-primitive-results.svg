@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="title desc">
+<title id="title">Isolated primitive success rates</title>
+<desc id="desc">Legacy 7k versus 14k primitive checkpoints. B2 and B3 use oracle initialization and are capability upper bounds.</desc>
+<rect width="960" height="500" rx="18" fill="#0b1220"/>
+<text x="92.0" y="42.0" text-anchor="start" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="500" fill="#e5e7eb">Isolated primitive success</text>
+<text x="92.0" y="68.0" text-anchor="start" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">20 episodes per cell · B2/B3 use oracle initialization</text>
+<line x1="92" y1="394.0" x2="900" y2="394.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="399.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">0%</text>
+<line x1="92" y1="344.0" x2="900" y2="344.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="349.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">10%</text>
+<line x1="92" y1="294.0" x2="900" y2="294.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="299.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">20%</text>
+<line x1="92" y1="244.0" x2="900" y2="244.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="249.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">30%</text>
+<line x1="92" y1="194.0" x2="900" y2="194.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="199.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">40%</text>
+<line x1="92" y1="144.0" x2="900" y2="144.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="149.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">50%</text>
+<line x1="92" y1="94.0" x2="900" y2="94.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="99.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">60%</text>
+<rect x="167.7" y="169.0" width="50" height="225.0" rx="5" fill="#a78bfa"/>
+<text x="192.7" y="159.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500" fill="#e5e7eb">9/20</text>
+<rect x="235.7" y="244.0" width="50" height="150.0" rx="5" fill="#34d399"/>
+<text x="260.7" y="234.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500" fill="#e5e7eb">6/20</text>
+<text x="226.7" y="426.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="400" fill="#e5e7eb">B1</text>
+<rect x="437.0" y="144.0" width="50" height="250.0" rx="5" fill="#a78bfa"/>
+<text x="462.0" y="134.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500" fill="#e5e7eb">10/20</text>
+<rect x="505.0" y="169.0" width="50" height="225.0" rx="5" fill="#34d399"/>
+<text x="530.0" y="159.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500" fill="#e5e7eb">9/20</text>
+<text x="496.0" y="426.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="400" fill="#e5e7eb">B2 (oracle init)</text>
+<rect x="706.3" y="319.0" width="50" height="75.0" rx="5" fill="#a78bfa"/>
+<text x="731.3" y="309.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500" fill="#e5e7eb">3/20</text>
+<rect x="774.3" y="244.0" width="50" height="150.0" rx="5" fill="#34d399"/>
+<text x="799.3" y="234.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500" fill="#e5e7eb">6/20</text>
+<text x="765.3" y="426.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="400" fill="#e5e7eb">B3 (oracle init)</text>
+<rect x="662" y="45" width="14" height="14" rx="3" fill="#a78bfa"/>
+<text x="684.0" y="57.0" text-anchor="start" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="400" fill="#e5e7eb">legacy 7k</text>
+<rect x="777" y="45" width="14" height="14" rx="3" fill="#34d399"/>
+<text x="799.0" y="57.0" text-anchor="start" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="400" fill="#e5e7eb">14k</text>
+<text x="496.0" y="458.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">Primitive policy</text>
+</svg>

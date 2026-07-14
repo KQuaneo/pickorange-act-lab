@@ -1,0 +1,1257 @@
+{
+  "count": 30,
+  "gate3_summary": "outputs/eval/pick_orange_gate_exp30/gate3_event_slice_replay/summary.json",
+  "source_lerobot": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0",
+  "orange003_slices": 30,
+  "target_successes": 29,
+  "prefix_intact": 29,
+  "strict_successes": 28,
+  "integrity_passes": 30,
+  "status_counts": {
+    "REJECT target": 1,
+    "STRICT PASS": 28,
+    "REJECT prefix": 1
+  },
+  "overview_pages": [
+    "outputs/audits/pick_orange_gate_exp30_b3/overview_page_01.jpg",
+    "outputs/audits/pick_orange_gate_exp30_b3/overview_page_02.jpg",
+    "outputs/audits/pick_orange_gate_exp30_b3/overview_page_03.jpg",
+    "outputs/audits/pick_orange_gate_exp30_b3/overview_page_04.jpg",
+    "outputs/audits/pick_orange_gate_exp30_b3/overview_page_05.jpg",
+    "outputs/audits/pick_orange_gate_exp30_b3/overview_page_06.jpg",
+    "outputs/audits/pick_orange_gate_exp30_b3/overview_page_07.jpg",
+    "outputs/audits/pick_orange_gate_exp30_b3/overview_page_08.jpg"
+  ],
+  "episodes": [
+    {
+      "lerobot_episode": 0,
+      "hdf5_episode": 0,
+      "status": "REJECT target",
+      "target_success": false,
+      "prefix_intact": true,
+      "strict_success": false,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": false
+      },
+      "target_max_lift_m": 0.20836412906646729,
+      "expected_frames": 400,
+      "parquet_frames": 400,
+      "front_decoded_frames": 400,
+      "wrist_decoded_frames": 400,
+      "clip_frames": 400,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 60.97474670410156,
+      "max_state_step_delta": 7.208766937255859,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          20.7,
+          34.03333333333333
+        ],
+        "observation.images.wrist": [
+          20.7,
+          34.03333333333333
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_000.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_000.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 1,
+      "hdf5_episode": 1,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.2006933093070984,
+      "expected_frames": 391,
+      "parquet_frames": 391,
+      "front_decoded_frames": 391,
+      "wrist_decoded_frames": 391,
+      "clip_frames": 391,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 57.14781188964844,
+      "max_state_step_delta": 6.313392639160156,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          59.8,
+          72.83333333333333
+        ],
+        "observation.images.wrist": [
+          59.8,
+          72.83333333333333
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_001.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_001.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 2,
+      "hdf5_episode": 2,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.18719714879989624,
+      "expected_frames": 393,
+      "parquet_frames": 393,
+      "front_decoded_frames": 393,
+      "wrist_decoded_frames": 393,
+      "clip_frames": 393,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 53.10798645019531,
+      "max_state_step_delta": 5.834716796875,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          98.63333333333333,
+          111.73333333333332
+        ],
+        "observation.images.wrist": [
+          98.63333333333333,
+          111.73333333333332
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_002.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_002.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 3,
+      "hdf5_episode": 3,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20604056119918823,
+      "expected_frames": 392,
+      "parquet_frames": 392,
+      "front_decoded_frames": 392,
+      "wrist_decoded_frames": 392,
+      "clip_frames": 392,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 60.14158630371094,
+      "max_state_step_delta": 6.9829559326171875,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          137.63333333333333,
+          150.7
+        ],
+        "observation.images.wrist": [
+          137.63333333333333,
+          150.7
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_003.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_003.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 4,
+      "hdf5_episode": 4,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.21242451667785645,
+      "expected_frames": 393,
+      "parquet_frames": 393,
+      "front_decoded_frames": 393,
+      "wrist_decoded_frames": 393,
+      "clip_frames": 393,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 62.249786376953125,
+      "max_state_step_delta": 7.365196228027344,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          176.56666666666666,
+          189.66666666666666
+        ],
+        "observation.images.wrist": [
+          176.56666666666666,
+          189.66666666666666
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_004.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_004.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 5,
+      "hdf5_episode": 5,
+      "status": "REJECT prefix",
+      "target_success": true,
+      "prefix_intact": false,
+      "strict_success": false,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": false,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.21061193943023682,
+      "expected_frames": 396,
+      "parquet_frames": 396,
+      "front_decoded_frames": 396,
+      "wrist_decoded_frames": 396,
+      "clip_frames": 396,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 61.55816650390625,
+      "max_state_step_delta": 6.880195617675781,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          215.36666666666665,
+          228.56666666666666
+        ],
+        "observation.images.wrist": [
+          215.36666666666665,
+          228.56666666666666
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_005.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_005.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 6,
+      "hdf5_episode": 6,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.19682824611663818,
+      "expected_frames": 395,
+      "parquet_frames": 395,
+      "front_decoded_frames": 395,
+      "wrist_decoded_frames": 395,
+      "clip_frames": 395,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 56.63179016113281,
+      "max_state_step_delta": 6.408931732177734,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          254.33333333333331,
+          267.5
+        ],
+        "observation.images.wrist": [
+          254.33333333333331,
+          267.5
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_006.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_006.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 7,
+      "hdf5_episode": 7,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.19623667001724243,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 55.8541259765625,
+      "max_state_step_delta": 6.176780700683594,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          293.26666666666665,
+          306.4
+        ],
+        "observation.images.wrist": [
+          293.26666666666665,
+          306.4
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_007.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_007.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 8,
+      "hdf5_episode": 8,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.21731990575790405,
+      "expected_frames": 396,
+      "parquet_frames": 396,
+      "front_decoded_frames": 396,
+      "wrist_decoded_frames": 396,
+      "clip_frames": 396,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 63.91630554199219,
+      "max_state_step_delta": 7.123264312744141,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          332.1333333333333,
+          345.3333333333333
+        ],
+        "observation.images.wrist": [
+          332.1333333333333,
+          345.3333333333333
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_008.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_008.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 9,
+      "hdf5_episode": 9,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20340806245803833,
+      "expected_frames": 395,
+      "parquet_frames": 395,
+      "front_decoded_frames": 395,
+      "wrist_decoded_frames": 395,
+      "clip_frames": 395,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 58.149749755859375,
+      "max_state_step_delta": 6.61376953125,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          371.1333333333333,
+          384.29999999999995
+        ],
+        "observation.images.wrist": [
+          371.1333333333333,
+          384.29999999999995
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_009.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_009.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 10,
+      "hdf5_episode": 10,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20292067527770996,
+      "expected_frames": 390,
+      "parquet_frames": 390,
+      "front_decoded_frames": 390,
+      "wrist_decoded_frames": 390,
+      "clip_frames": 390,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 58.511383056640625,
+      "max_state_step_delta": 6.980274200439453,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          410.26666666666665,
+          423.26666666666665
+        ],
+        "observation.images.wrist": [
+          410.26666666666665,
+          423.26666666666665
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_010.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_010.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 11,
+      "hdf5_episode": 11,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20457953214645386,
+      "expected_frames": 395,
+      "parquet_frames": 395,
+      "front_decoded_frames": 395,
+      "wrist_decoded_frames": 395,
+      "clip_frames": 395,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 58.5731201171875,
+      "max_state_step_delta": 6.9841766357421875,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          449.0,
+          462.16666666666663
+        ],
+        "observation.images.wrist": [
+          449.0,
+          462.16666666666663
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_011.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_011.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 12,
+      "hdf5_episode": 12,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20681381225585938,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 60.449005126953125,
+      "max_state_step_delta": 6.951240539550781,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          488.0,
+          501.1333333333333
+        ],
+        "observation.images.wrist": [
+          488.0,
+          501.1333333333333
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_012.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_012.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 13,
+      "hdf5_episode": 13,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.1867368221282959,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 52.385589599609375,
+      "max_state_step_delta": 5.8621673583984375,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          526.9,
+          540.0333333333333
+        ],
+        "observation.images.wrist": [
+          526.9,
+          540.0333333333333
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_013.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_013.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 14,
+      "hdf5_episode": 14,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20325005054473877,
+      "expected_frames": 392,
+      "parquet_frames": 392,
+      "front_decoded_frames": 392,
+      "wrist_decoded_frames": 392,
+      "clip_frames": 392,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 58.45930480957031,
+      "max_state_step_delta": 6.801017761230469,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          565.9,
+          578.9666666666666
+        ],
+        "observation.images.wrist": [
+          565.9,
+          578.9666666666666
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_014.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_014.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 15,
+      "hdf5_episode": 15,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20031899213790894,
+      "expected_frames": 393,
+      "parquet_frames": 393,
+      "front_decoded_frames": 393,
+      "wrist_decoded_frames": 393,
+      "clip_frames": 393,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 57.371307373046875,
+      "max_state_step_delta": 6.440341949462891,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          604.7999999999998,
+          617.8999999999999
+        ],
+        "observation.images.wrist": [
+          604.7999999999998,
+          617.8999999999999
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_015.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_015.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 16,
+      "hdf5_episode": 16,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20372086763381958,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 58.81170654296875,
+      "max_state_step_delta": 6.674602508544922,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-000.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          643.6999999999998,
+          656.8333333333331
+        ],
+        "observation.images.wrist": [
+          643.6999999999998,
+          656.8333333333331
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_016.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_016.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 17,
+      "hdf5_episode": 17,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.2071581482887268,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 60.87135314941406,
+      "max_state_step_delta": 7.246063232421875,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          20.733333333333334,
+          33.86666666666667
+        ],
+        "observation.images.wrist": [
+          682.5999999999998,
+          695.7333333333331
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_017.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_017.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 18,
+      "hdf5_episode": 18,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20827800035476685,
+      "expected_frames": 392,
+      "parquet_frames": 392,
+      "front_decoded_frames": 392,
+      "wrist_decoded_frames": 392,
+      "clip_frames": 392,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 60.404083251953125,
+      "max_state_step_delta": 6.734241485595703,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          59.8,
+          72.86666666666666
+        ],
+        "observation.images.wrist": [
+          721.6666666666664,
+          734.733333333333
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_018.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_018.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 19,
+      "hdf5_episode": 19,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20067840814590454,
+      "expected_frames": 393,
+      "parquet_frames": 393,
+      "front_decoded_frames": 393,
+      "wrist_decoded_frames": 393,
+      "clip_frames": 393,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 57.39434814453125,
+      "max_state_step_delta": 6.378574371337891,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          98.66666666666666,
+          111.76666666666665
+        ],
+        "observation.images.wrist": [
+          760.533333333333,
+          773.633333333333
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_019.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_019.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 20,
+      "hdf5_episode": 20,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.2186165452003479,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 64.33393859863281,
+      "max_state_step_delta": 7.149452209472656,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          137.56666666666666,
+          150.7
+        ],
+        "observation.images.wrist": [
+          799.4333333333329,
+          812.5666666666663
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_020.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_020.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 21,
+      "hdf5_episode": 21,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.20387274026870728,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 59.03547668457031,
+      "max_state_step_delta": 6.9268341064453125,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          176.46666666666664,
+          189.6
+        ],
+        "observation.images.wrist": [
+          838.3333333333329,
+          851.4666666666662
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_021.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_021.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 22,
+      "hdf5_episode": 22,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.19635635614395142,
+      "expected_frames": 392,
+      "parquet_frames": 392,
+      "front_decoded_frames": 392,
+      "wrist_decoded_frames": 392,
+      "clip_frames": 392,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 56.19371032714844,
+      "max_state_step_delta": 6.308982849121094,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-000.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          215.5,
+          228.56666666666666
+        ],
+        "observation.images.wrist": [
+          877.3666666666662,
+          890.4333333333328
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_022.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_022.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 23,
+      "hdf5_episode": 23,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.18428146839141846,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 52.12477111816406,
+      "max_state_step_delta": 5.622779846191406,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-001.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          254.33333333333331,
+          267.46666666666664
+        ],
+        "observation.images.wrist": [
+          20.733333333333334,
+          33.86666666666667
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_023.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_023.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 24,
+      "hdf5_episode": 24,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.2003651261329651,
+      "expected_frames": 392,
+      "parquet_frames": 392,
+      "front_decoded_frames": 392,
+      "wrist_decoded_frames": 392,
+      "clip_frames": 392,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 57.660400390625,
+      "max_state_step_delta": 6.686801910400391,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-001.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          293.3666666666666,
+          306.4333333333333
+        ],
+        "observation.images.wrist": [
+          59.766666666666666,
+          72.83333333333333
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_024.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_024.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 25,
+      "hdf5_episode": 25,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.21082168817520142,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 61.71247863769531,
+      "max_state_step_delta": 6.886363983154297,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-001.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          332.2333333333333,
+          345.3666666666666
+        ],
+        "observation.images.wrist": [
+          98.63333333333333,
+          111.76666666666665
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_025.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_025.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 26,
+      "hdf5_episode": 26,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.2007848024368286,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 57.694000244140625,
+      "max_state_step_delta": 6.738277435302734,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-001.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          371.09999999999997,
+          384.2333333333333
+        ],
+        "observation.images.wrist": [
+          137.49999999999997,
+          150.63333333333333
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_026.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_026.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 27,
+      "hdf5_episode": 27,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.2067280411720276,
+      "expected_frames": 393,
+      "parquet_frames": 393,
+      "front_decoded_frames": 393,
+      "wrist_decoded_frames": 393,
+      "clip_frames": 393,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 60.531890869140625,
+      "max_state_step_delta": 6.909130096435547,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-001.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          410.1333333333333,
+          423.2333333333333
+        ],
+        "observation.images.wrist": [
+          176.53333333333333,
+          189.63333333333333
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_027.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_027.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 28,
+      "hdf5_episode": 28,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.19919925928115845,
+      "expected_frames": 393,
+      "parquet_frames": 393,
+      "front_decoded_frames": 393,
+      "wrist_decoded_frames": 393,
+      "clip_frames": 393,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 56.489410400390625,
+      "max_state_step_delta": 6.215946197509766,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-001.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          449.06666666666666,
+          462.16666666666663
+        ],
+        "observation.images.wrist": [
+          215.46666666666667,
+          228.56666666666666
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_028.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_028.mp4",
+      "integrity_pass": true
+    },
+    {
+      "lerobot_episode": 29,
+      "hdf5_episode": 29,
+      "status": "STRICT PASS",
+      "target_success": true,
+      "prefix_intact": true,
+      "strict_success": true,
+      "final_in_plate": {
+        "Orange001": true,
+        "Orange002": true,
+        "Orange003": true
+      },
+      "target_max_lift_m": 0.19924867153167725,
+      "expected_frames": 394,
+      "parquet_frames": 394,
+      "front_decoded_frames": 394,
+      "wrist_decoded_frames": 394,
+      "clip_frames": 394,
+      "finite_actions": true,
+      "finite_states": true,
+      "max_action_step_delta": 56.717803955078125,
+      "max_state_step_delta": 6.248558044433594,
+      "timestamp_step_max_error": 3.3060709635421293e-06,
+      "video_paths": {
+        "observation.images.front": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.front/chunk-000/file-001.mp4",
+        "observation.images.wrist": "data/lerobot/local/so101_pick_orange_gate_exp30_a0_joint6_v0/videos/observation.images.wrist/chunk-000/file-001.mp4"
+      },
+      "video_windows": {
+        "observation.images.front": [
+          487.93333333333334,
+          501.06666666666666
+        ],
+        "observation.images.wrist": [
+          254.33333333333331,
+          267.46666666666664
+        ]
+      },
+      "contact_sheet": "outputs/audits/pick_orange_gate_exp30_b3/contact_sheets/episode_029.jpg",
+      "clip": "outputs/audits/pick_orange_gate_exp30_b3/clips/episode_029.mp4",
+      "integrity_pass": true
+    }
+  ]
+}

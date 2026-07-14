@@ -1,0 +1,1985 @@
+{
+  "orange001": {
+    "path": "data/lerobot/local/so101_pick_orange_a1_orange001_joint6_v0/data/chunk-000/file-000.parquet",
+    "episodes": [
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 0
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 1
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 2
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 3
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 4
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 5
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 6
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 7
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 8
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 9
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 10
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 11
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 12
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 13
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 14
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 15
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 16
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 17
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 18
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 19
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 20
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 21
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 22
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 23
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 24
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 25
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 26
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 27
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 28
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 29
+      }
+    ],
+    "aggregate": {
+      "close_fraction": {
+        "mean": 0.35294117647058837,
+        "std": 1.1102230246251565e-16,
+        "min": 0.35294117647058826,
+        "max": 0.35294117647058826
+      },
+      "first_close_frame": {
+        "mean": 178.0,
+        "std": 0.0,
+        "min": 178.0,
+        "max": 178.0
+      },
+      "open_after_close_frame": {
+        "mean": 298.0,
+        "std": 0.0,
+        "min": 298.0,
+        "max": 298.0
+      },
+      "longest_close_len": {
+        "mean": 120.0,
+        "std": 0.0,
+        "min": 120.0,
+        "max": 120.0
+      }
+    }
+  },
+  "orange002": {
+    "path": "data/lerobot/local/so101_pick_orange_a1_orange002_joint6_v0/data/chunk-000/file-000.parquet",
+    "episodes": [
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 0
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 1
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 2
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 3
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 4
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 5
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 6
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 7
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 8
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 9
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 10
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 11
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 12
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 13
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 14
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 15
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 16
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 17
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 18
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 19
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 20
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 21
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 22
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 23
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 24
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 25
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 26
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 27
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 28
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 29
+      }
+    ],
+    "aggregate": {
+      "close_fraction": {
+        "mean": 0.35294117647058837,
+        "std": 1.1102230246251565e-16,
+        "min": 0.35294117647058826,
+        "max": 0.35294117647058826
+      },
+      "first_close_frame": {
+        "mean": 178.0,
+        "std": 0.0,
+        "min": 178.0,
+        "max": 178.0
+      },
+      "open_after_close_frame": {
+        "mean": 298.0,
+        "std": 0.0,
+        "min": 298.0,
+        "max": 298.0
+      },
+      "longest_close_len": {
+        "mean": 120.0,
+        "std": 0.0,
+        "min": 120.0,
+        "max": 120.0
+      }
+    }
+  },
+  "orange003": {
+    "path": "data/lerobot/local/so101_pick_orange_a1_orange003_joint6_v0/data/chunk-000/file-000.parquet",
+    "episodes": [
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 0
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 1
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 2
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 3
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 4
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 5
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 6
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 7
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 8
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 9
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 10
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 11
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 12
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 13
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 14
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 15
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 16
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 17
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 18
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 19
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 20
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 21
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 22
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 23
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 24
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 25
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 26
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 27
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 28
+      },
+      {
+        "min": 29.925737380981445,
+        "max": 61.177982330322266,
+        "mean": 50.14778137207031,
+        "threshold": 40.0,
+        "close_fraction": 0.35294117647058826,
+        "first_close_frame": 178,
+        "open_after_close_frame": 298,
+        "close_segments": [
+          [
+            178,
+            297
+          ]
+        ],
+        "longest_close_segment": [
+          178,
+          297
+        ],
+        "longest_close_len": 120,
+        "episode_index": 29
+      }
+    ],
+    "aggregate": {
+      "close_fraction": {
+        "mean": 0.35294117647058837,
+        "std": 1.1102230246251565e-16,
+        "min": 0.35294117647058826,
+        "max": 0.35294117647058826
+      },
+      "first_close_frame": {
+        "mean": 178.0,
+        "std": 0.0,
+        "min": 178.0,
+        "max": 178.0
+      },
+      "open_after_close_frame": {
+        "mean": 298.0,
+        "std": 0.0,
+        "min": 298.0,
+        "max": 298.0
+      },
+      "longest_close_len": {
+        "mean": 120.0,
+        "std": 0.0,
+        "min": 120.0,
+        "max": 120.0
+      }
+    }
+  }
+}

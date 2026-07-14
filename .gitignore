@@ -1,0 +1,31 @@
+# Local environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# Private or heavyweight robotics artifacts
+data/
+datasets/
+outputs/
+checkpoints/
+wandb/
+*.hdf5
+*.h5
+*.parquet
+*.safetensors
+*.pt
+*.pth
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+activate.sh
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/

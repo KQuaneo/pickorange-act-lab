@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "purpose": "Run only after exploratory checkpoint selection is frozen; never launched automatically.",
+  "selection_rule": "Choose one A0 and one A1 checkpoint using the existing 20-episode exploratory evaluation, then freeze labels before confirmation.",
+  "paired_initialization": {
+    "seed": 2026,
+    "episode_indices": "0:99",
+    "episodes": 100,
+    "require_initial_state_id_match": true
+  },
+  "protocol": {
+    "formal_a0_policy_steps": 1020,
+    "formal_a1_policy_steps_per_stage": 420,
+    "secondary_comparable_a0_policy_steps": 1260,
+    "sim_steps_per_action": 2,
+    "stable_plate_steps": 10,
+    "success_definition": "preserve evaluator formal definition; all three oranges in plate at final step; no robot-rest requirement"
+  },
+  "levels": {
+    "level_1": "isolated B1/B2/B3, explicitly marking oracle initialization",
+    "level_2": "full sequential A1 fixed-time scheduler and A0"
+  },
+  "statistics": {
+    "primary": "paired exact McNemar on final success",
+    "secondary": "paired bootstrap on final orange count and stage outcomes",
+    "bootstrap_samples": 10000,
+    "confidence": 0.95
+  }
+}
