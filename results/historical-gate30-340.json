@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "experiment": "Gate30 batch-64 baseline under the legacy 340-action A1 stage horizon",
+  "episodes_per_configuration": 20,
+  "seed": 2026,
+  "total_policy_actions": 1020,
+  "comparability_warning": "These results use 340 actions per A1 stage and a 29-episode target-success B3 dataset. They are historical protocol evidence and must not be pooled with the corrected 420-action strict-prefix final benchmark.",
+  "results": [
+    {
+      "method": "A0",
+      "checkpoint": "15k",
+      "successes": 0,
+      "stage_successes": {"Orange001": 4, "Orange002": 1, "Orange003": 0}
+    },
+    {
+      "method": "A0",
+      "checkpoint": "18k",
+      "successes": 0,
+      "stage_successes": {"Orange001": 8, "Orange002": 1, "Orange003": 0}
+    },
+    {
+      "method": "A0",
+      "checkpoint": "21k",
+      "successes": 0,
+      "stage_successes": {"Orange001": 8, "Orange002": 0, "Orange003": 0}
+    },
+    {
+      "method": "A1",
+      "checkpoint": "5k per primitive",
+      "successes": 1,
+      "stage_successes": {"Orange001": 5, "Orange002": 3, "Orange003": 3}
+    },
+    {
+      "method": "A1",
+      "checkpoint": "6k per primitive",
+      "successes": 1,
+      "stage_successes": {"Orange001": 2, "Orange002": 2, "Orange003": 2}
+    },
+    {
+      "method": "A1",
+      "checkpoint": "7k per primitive",
+      "successes": 0,
+      "stage_successes": {"Orange001": 2, "Orange002": 5, "Orange003": 2}
+    }
+  ]
+}

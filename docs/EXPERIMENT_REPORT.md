@@ -63,6 +63,32 @@ time boundaries and is not a success oracle. A2 receives a privileged stage
 identifier. A3 uses simulator state for switching. Isolated B2/B3 synthesize a
 successful prefix and therefore cannot be interpreted as sequential rollouts.
 
+### 2.1 Training lineage and comparison policy
+
+The completed work contains four training generations rather than one run:
+
+| Generation | Training | Protocol role |
+|---|---|---|
+| G1 | batch-128 A0/A2 to 21k and B1/B2/B3 to 7k; 24 train / 6 validation | A0–A3 methodological ablation |
+| G2 | three batch-128 SingleOrange policies to 7k | action-horizon diagnostic |
+| G3 | batch-64 Gate30 A0 to 21k and B1/B2/B3 to 7k | legacy 340-action history; final checkpoints also re-evaluated at 420 |
+| G4 | batch-64 A0 to 42k and strict-prefix B1/B2/B3 to 14k | primary final benchmark |
+
+The summaries cover 1,020 rollout episodes across historical, diagnostic and
+final protocols. This demonstrates evaluation scope but is not one statistical
+sample; rates are never pooled across incompatible cells.
+
+G3 A1 produced 1/20 full success at 5k and 6k per primitive under the legacy
+340×3 protocol, followed by 0/20 at 7k. This evidence is worth preserving
+because it predates the final doubled-step run and reinforces non-monotonic
+checkpoint behavior. It remains outside the main bar chart because G4 changed
+the stage horizon to 420 and tightened B3 from 29 target-success slices to 28
+strict-prefix slices. The G3 final 7k policies were separately re-evaluated at
+420×3 and again achieved 0/20.
+
+See the [complete experiment index](EXPERIMENT_INDEX.md) for the inclusion
+decision and the exact historical checkpoint table.
+
 ## 3. Experiment sequence
 
 ### 3.1 Data/schema and replay gates
@@ -302,4 +328,3 @@ transfer to hardware.
 - Strict B3 audit: [`experiments/audit_pick_orange_b3_slices.py`](../experiments/audit_pick_orange_b3_slices.py)
 - Statistical helpers: [`experiments/pick_orange_analysis.py`](../experiments/pick_orange_analysis.py)
 - Resilient pipeline: [`experiments/run_pick_orange_30_only_pipeline.py`](../experiments/run_pick_orange_30_only_pipeline.py)
-

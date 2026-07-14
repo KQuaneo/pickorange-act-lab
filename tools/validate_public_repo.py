@@ -37,6 +37,11 @@ def check_summary(errors: list[str]) -> None:
         fail("Native horizons must remain explicitly unmatched", errors)
     if data["evaluation"]["matched_horizon"]["enabled_by_default"]:
         fail("Matched horizon must remain opt-in", errors)
+    if data["evaluated_rollout_inventory"]["total"] != 1020:
+        fail("Unexpected historical rollout inventory", errors)
+    gate30 = next(item for item in data["training_generations"] if item["id"] == "G3")
+    if gate30["legacy_full_task_results"]["A1"] != {"5k": [1, 20], "6k": [1, 20], "7k": [0, 20]}:
+        fail("Unexpected Gate30 legacy checkpoint results", errors)
 
 
 def check_python(errors: list[str]) -> None:

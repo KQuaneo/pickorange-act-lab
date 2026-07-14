@@ -7,7 +7,7 @@
 [![LeRobot](https://img.shields.io/badge/Policy-LeRobot%20ACT-FFD21E)](https://github.com/huggingface/lerobot)
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 
-[中文说明](README.zh-CN.md) · [Full experiment report](docs/EXPERIMENT_REPORT.md) · [Reproduction guide](docs/REPRODUCIBILITY.md) · [Machine-readable results](results/summary.json)
+[中文说明](README.zh-CN.md) · [Full experiment report](docs/EXPERIMENT_REPORT.md) · [Experiment index](docs/EXPERIMENT_INDEX.md) · [Reproduction guide](docs/REPRODUCIBILITY.md) · [Machine-readable results](results/summary.json)
 
 PickOrange-ACT is an end-to-end embodied-AI experiment on a difficult
 three-object pick-and-place task in [LeIsaac](https://github.com/LightwheelAI/leisaac).
@@ -37,6 +37,7 @@ robustness and sequential state distribution shift remain limiting factors.
 | Demonstrations | 30 expert episodes, audited after event-based slicing |
 | Final training | Batch 64; A0 42k steps; each A1 primitive 14k steps |
 | Formal evaluation | 20 episodes/configuration, seed 2026, Wilson 95% intervals |
+| Evaluation inventory | 1,020 rollout episodes across historical, diagnostic and final protocols |
 | Main comparison | A0 monolithic policy vs A1 three-policy fixed-time scheduler |
 
 ```mermaid
@@ -55,6 +56,24 @@ flowchart LR
     I --> J
 ```
 
+## Four training generations
+
+Earlier runs are included, but assigned to different evidence tiers so protocol
+changes are not hidden:
+
+| Generation | What was trained | Scientific role |
+|---|---|---|
+| G1 | batch-128 A0/A1/A2; A3 reused A1; 24 train / 6 val | long-task and scheduler ablation |
+| G2 | SingleOrange ACT with horizons 25/50/100 | primitive-control diagnostic |
+| G3 | batch-64 Gate30 A0 21k and A1 7k | historical 340-action protocol + corrected final-checkpoint re-evaluation |
+| G4 | batch-64 A0 42k and strict-prefix A1 14k | primary final benchmark |
+
+G3 adds an important historical observation: A1 achieved 1/20 at both 5k and
+6k per primitive under the old 340×3 protocol, then 0/20 at 7k. These cells
+support the non-monotonic checkpoint finding, but are not merged into the final
+chart because G4 uses 420×3 and stricter B3 filtering. See the
+[complete experiment index](docs/EXPERIMENT_INDEX.md).
+
 ## Key findings
 
 ### 1. Modularization produced observed full-task successes
@@ -66,7 +85,7 @@ silently treated as matched.
 
 ![Final full-task success rates](assets/final-full-task-results.svg)
 
-| Policy | Legacy | Intermediate 1 | Intermediate 2 | Final |
+| Policy | G3 final re-eval | Intermediate 1 | Intermediate 2 | G4 final |
 |---|---:|---:|---:|---:|
 | A0, monolithic | 0/20 @ 21k | 0/20 @ 30k | 0/20 @ 36k | 0/20 @ 42k |
 | A1, 3-policy | 0/20 @ 7k | 2/20 @ 10k | 0/20 @ 12k | **3/20 @ 14k** |
@@ -197,4 +216,3 @@ The experiment builds on [LeIsaac](https://github.com/LightwheelAI/leisaac),
 introduced in [Learning Fine-Grained Bimanual Manipulation with Low-Cost
 Hardware](https://arxiv.org/abs/2304.13705). See [NOTICE.md](NOTICE.md) and the
 Apache-2.0 [LICENSE](LICENSE).
-

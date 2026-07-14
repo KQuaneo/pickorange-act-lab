@@ -1,6 +1,6 @@
 # PickOrange-ACT：可审计的长时序具身智能实验
 
-[English](README.md) · [完整实验报告](docs/EXPERIMENT_REPORT.md) · [复现说明](docs/REPRODUCIBILITY.md) · [机器可读结果](results/summary.json)
+[English](README.md) · [完整实验报告](docs/EXPERIMENT_REPORT.md) · [全部实验索引](docs/EXPERIMENT_INDEX.md) · [复现说明](docs/REPRODUCIBILITY.md) · [机器可读结果](results/summary.json)
 
 这是一个基于 LeIsaac、Isaac Lab 和 LeRobot ACT 的 SO-101 三橘子长时序
 抓取放置项目。项目覆盖专家数据采集与切片、严格前缀审计、ACT 训练、GPU
@@ -9,6 +9,7 @@
 ## 最重要的结果
 
 - 30 条专家数据；最终每个配置评测 20 episodes，seed=2026。
+- 四代训练与诊断累计保存了 1,020 个 rollout episode 的汇总；不同协议不混合计算成功率。
 - 单策略 A0 在 21k/30k/36k/42k 均为 0/20。
 - 三子策略固定时间调度 A1 在 10k 达到 2/20，在 14k 达到 **3/20=15%**。
 - isolated B1/B2/B3 在 14k 分别为 30%/45%/30%；B2/B3 是 oracle 初始化，
@@ -17,6 +18,8 @@
   success 28/30，排除了两条语义不合格数据。
 - 审计发现第三次释放发生在 350–358 actions，证明旧的 340-action 切片会
   截断关键动作，因此正式 A1 改为每阶段 420 actions。
+- 中间 Gate30 训练在旧 340×3 协议下，A1 5k 和 6k 都出现过 1/20，7k
+  回落到 0/20。该结果保留为历史证据，但不与最终 420×3 主结果直接合并。
 
 ![最终完整任务结果](assets/final-full-task-results.svg)
 
@@ -44,4 +47,3 @@
 
 代码入口和运行方式见 [复现说明](docs/REPRODUCIBILITY.md)，完整实验演进与限制见
 [统一报告](docs/EXPERIMENT_REPORT.md)。
-
