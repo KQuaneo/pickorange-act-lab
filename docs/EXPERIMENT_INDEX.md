@@ -10,8 +10,8 @@ batch size, horizon and scientific role. “Earlier” does not automatically me
 |---|---|---|---|---|
 | G1: joint6 ablation | A0, A2, B1/B2/B3; A3 reused B policies | 24 train / 6 val, batch 128 | A0–A3 × four checkpoints; B1–B3 isolated; 560 rollouts | Include as diagnostic ablation |
 | G2: SingleOrange | Orange001 horizon 25/50/100 | 24 train / 6 val, batch 128 | 60 rollouts | Include as primitive diagnostic |
-| G3: Gate30 baseline | A0 to 21k; B1/B2/B3 to 7k | 30 train, batch 64; B3 target-success 29 episodes | 120 legacy-protocol rollouts; final checkpoint re-evaluated at 420 actions | Include separately as protocol history |
-| G4: doubled strict-prefix | A0 to 42k; B1/B2/B3 to 14k | batch 64; strict B3 28 episodes | 160 full-task + 120 isolated/legacy comparison rollouts | Primary final benchmark |
+| G3: Gate30 baseline | A0 to 21k; B1/B2/B3 to 7k | 30 train, batch 64; B3 target-success 29 episodes | 120 legacy-protocol + 40 corrected full-task + 60 isolated rollouts | Include separately as protocol history |
+| G4: doubled strict-prefix | A0 to 42k; B1/B2/B3 to 14k | batch 64; strict B3 28 episodes | 120 full-task + 60 isolated rollouts | Primary final benchmark |
 
 Across these generations, the repository contains summaries for **1,020
 evaluated rollout episodes**. This is an inventory count, not a pooled sample:
@@ -42,7 +42,9 @@ resolved improvement.
 It does **not** establish a clean step-scaling curve. G3 used the old 340-action
 boundary, while G4 uses 420 actions and a stricter B3 dataset. The G3 final 7k
 policies were re-evaluated under the corrected 420-action protocol for the final
-comparison and again achieved 0/20.
+historical archive and again achieved 0/20. Those corrected re-evaluations are
+not included in the primary chart or table because the initialization sequences
+are not fully paired with G4.
 
 Machine-readable evidence: [`historical-gate30-340.json`](../results/historical-gate30-340.json).
 

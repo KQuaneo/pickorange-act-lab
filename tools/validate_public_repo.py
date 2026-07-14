@@ -39,6 +39,12 @@ def check_summary(errors: list[str]) -> None:
         fail("Matched horizon must remain opt-in", errors)
     if data["evaluated_rollout_inventory"]["total"] != 1020:
         fail("Unexpected historical rollout inventory", errors)
+    if len(data["final_full_task"]) != 6 or any(row["checkpoint"] in {"21k", "7k"} for row in data["final_full_task"]):
+        fail("Primary full-task results must contain only the six G4 cells", errors)
+    if len(data["isolated_primitives"]) != 3 or any(row["checkpoint_family"] != "14k" for row in data["isolated_primitives"]):
+        fail("Primary isolated results must contain only the three G4 14k cells", errors)
+    if not data["historical_reference"]["not_a_direct_comparator"]:
+        fail("Historical G3 results must be marked as non-direct comparators", errors)
     gate30 = next(item for item in data["training_generations"] if item["id"] == "G3")
     if gate30["legacy_full_task_results"]["A1"] != {"5k": [1, 20], "6k": [1, 20], "7k": [0, 20]}:
         fail("Unexpected Gate30 legacy checkpoint results", errors)

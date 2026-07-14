@@ -71,7 +71,8 @@ changes are not hidden:
 G3 adds an important historical observation: A1 achieved 1/20 at both 5k and
 6k per primitive under the old 340×3 protocol, then 0/20 at 7k. These cells
 support the non-monotonic checkpoint finding, but are not merged into the final
-chart because G4 uses 420×3 and stricter B3 filtering. See the
+chart because G4 is an independent training run with 420×3 scheduling, stricter
+B3 filtering and a non-paired initialization sequence. See the
 [complete experiment index](docs/EXPERIMENT_INDEX.md).
 
 ## Key findings
@@ -85,10 +86,14 @@ silently treated as matched.
 
 ![Final full-task success rates](assets/final-full-task-results.svg)
 
-| Policy | G3 final re-eval | Intermediate 1 | Intermediate 2 | G4 final |
-|---|---:|---:|---:|---:|
-| A0, monolithic | 0/20 @ 21k | 0/20 @ 30k | 0/20 @ 36k | 0/20 @ 42k |
-| A1, 3-policy | 0/20 @ 7k | 2/20 @ 10k | 0/20 @ 12k | **3/20 @ 14k** |
+| Policy | G4 checkpoint 1 | G4 checkpoint 2 | G4 checkpoint 3 |
+|---|---:|---:|---:|
+| A0, monolithic | 0/20 @ 30k | 0/20 @ 36k | 0/20 @ 42k |
+| A1, 3-policy | 2/20 @ 10k | 0/20 @ 12k | **3/20 @ 14k** |
+
+The primary chart contains only the protocol-consistent G4 benchmark. G3
+results remain available as historical evidence in the
+[complete experiment index](docs/EXPERIMENT_INDEX.md), not as a direct baseline.
 
 The A1 result is evidence that temporal decomposition can help this task, but
 the wide Wilson interval for 3/20 (5.2–36.0%) means it should not be presented
