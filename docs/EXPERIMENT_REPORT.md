@@ -142,10 +142,10 @@ initialization. B2/B3 use oracle initialization with already-completed oranges
 placed in the plate, robot joints set to the corresponding expert subtask start,
 and camera observations rendered after the synthetic state is applied.
 
-The legacy final 7k primitives achieved 45%/50%/15% for B1/B2/B3. Earlier
-checkpoint sweeps produced legacy best values of 45%/40%/25%, which are retained
-in the historical raw results; the later final-protocol comparison reran the
-7k family and is the source of the 45%/50%/15% table used in this repository.
+The G3 archive records 45%/50%/15% for its final 7k B1/B2/B3 checkpoints.
+Earlier checkpoint sweeps recorded legacy best values of 45%/40%/25%. These
+measurements are retained only as historical protocol evidence and are excluded
+from the G4 primary table and charts.
 
 This distinction matters: isolated success quantifies primitive capability in
 a controlled start-state distribution, not the probability that three
@@ -208,15 +208,13 @@ separately labeled rather than silently rewritten.
 
 The final study kept batch size 64 and the 30-demo dataset fixed. A0 was trained
 to 42k; each A1 primitive to 14k. Only three new checkpoints were retained, with
-the legacy final checkpoint added to evaluation for a four-point comparison.
+all primary comparisons restricted to the protocol-consistent G4 run.
 
 | Method | Checkpoint | Full success | Wilson 95% | Mean final oranges |
 |---|---:|---:|---:|---:|
-| A0 | 21k legacy | 0/20 | 0.0–16.1% | 0.60 |
 | A0 | 30k | 0/20 | 0.0–16.1% | 0.70 |
 | A0 | 36k | 0/20 | 0.0–16.1% | 0.55 |
 | A0 | 42k | 0/20 | 0.0–16.1% | 0.35 |
-| A1 | 7k legacy | 0/20 | 0.0–16.1% | 0.60 |
 | A1 | 10k | 2/20 | 2.8–30.1% | 0.65 |
 | A1 | 12k | 0/20 | 0.0–16.1% | 0.70 |
 | A1 | 14k | **3/20** | **5.2–36.0%** | **0.75** |
@@ -225,13 +223,18 @@ The non-monotonic 10k/12k/14k result is another warning that training loss or
 step count alone is not a reliable model-selection signal for contact-rich
 rollouts. With 20 episodes, apparent differences have substantial uncertainty.
 
-The final isolated comparison was:
+The final G4 isolated evaluation was:
 
-| Primitive | Legacy 7k | 14k |
-|---|---:|---:|
-| B1 | 9/20 (45%) | 6/20 (30%) |
-| B2, oracle initialized | 10/20 (50%) | 9/20 (45%) |
-| B3, oracle initialized | 3/20 (15%) | 6/20 (30%) |
+| Primitive | G4 14k |
+|---|---:|
+| B1 | 6/20 (30%) |
+| B2, oracle initialized | 9/20 (45%) |
+| B3, oracle initialized | 6/20 (30%) |
+
+The independently trained G3 checkpoints are preserved in the
+[experiment index](EXPERIMENT_INDEX.md) as historical evidence. They are not a
+direct baseline because training lineage, B3 dataset semantics and evaluation
+initialization sequences are not fully matched.
 
 ### 3.8 Native versus matched horizon
 

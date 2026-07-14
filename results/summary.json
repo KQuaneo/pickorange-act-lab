@@ -81,7 +81,7 @@
       "data_split": "30 A0/B1/B2 episodes; 28 strict-prefix B3 episodes",
       "training": "A0 to 42k; B1/B2/B3 to 14k",
       "stage_horizon": 420,
-      "evaluation": "8 full-task cells and 6 isolated cells, 20 episodes each",
+      "evaluation": "6 full-task cells and 3 isolated cells, 20 episodes each",
       "role_in_report": "primary final benchmark"
     }
   ],
@@ -90,8 +90,10 @@
     "G1_isolated": 240,
     "G2_single_orange": 60,
     "G3_full_task_legacy_protocol": 120,
-    "G4_full_task": 160,
-    "G4_isolated_including_G3_final_reevaluation": 120,
+    "G3_final_corrected_reevaluation": 40,
+    "G3_isolated_final_checkpoint": 60,
+    "G4_full_task": 120,
+    "G4_isolated": 60,
     "total": 1020,
     "note": "Counts evaluation episodes across distinct historical, diagnostic and final protocols; they are not pooled into one success rate."
   },
@@ -115,8 +117,6 @@
     "note": "Legacy A1 used a 340-action stage horizon and is reported separately from the corrected 420-action protocol."
   },
   "final_full_task": [
-    {"method": "A0", "checkpoint": "21k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.60},
-    {"method": "A1", "checkpoint": "7k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.60},
     {"method": "A0", "checkpoint": "30k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.70},
     {"method": "A1", "checkpoint": "10k", "successes": 2, "episodes": 20, "rate": 0.10, "wilson95": [0.028, 0.301], "mean_final_oranges": 0.65},
     {"method": "A0", "checkpoint": "36k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.55},
@@ -125,13 +125,23 @@
     {"method": "A1", "checkpoint": "14k", "successes": 3, "episodes": 20, "rate": 0.15, "wilson95": [0.052, 0.360], "mean_final_oranges": 0.75}
   ],
   "isolated_primitives": [
-    {"checkpoint_family": "legacy 7k", "stage": "B1", "successes": 9, "episodes": 20, "rate": 0.45},
-    {"checkpoint_family": "legacy 7k", "stage": "B2", "successes": 10, "episodes": 20, "rate": 0.50, "oracle_initialization": true},
-    {"checkpoint_family": "legacy 7k", "stage": "B3", "successes": 3, "episodes": 20, "rate": 0.15, "oracle_initialization": true},
     {"checkpoint_family": "14k", "stage": "B1", "successes": 6, "episodes": 20, "rate": 0.30},
     {"checkpoint_family": "14k", "stage": "B2", "successes": 9, "episodes": 20, "rate": 0.45, "oracle_initialization": true},
     {"checkpoint_family": "14k", "stage": "B3", "successes": 6, "episodes": 20, "rate": 0.30, "oracle_initialization": true}
   ],
+  "historical_reference": {
+    "not_a_direct_comparator": true,
+    "reason": "G3 and G4 are independent training runs; their B3 dataset semantics differ, and their evaluation initialization sequences are not fully paired.",
+    "corrected_420_action_final_checkpoint_reevaluation": [
+      {"method": "A0", "checkpoint": "21k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.60},
+      {"method": "A1", "checkpoint": "7k", "successes": 0, "episodes": 20, "rate": 0.00, "wilson95": [0.000, 0.161], "mean_final_oranges": 0.60}
+    ],
+    "isolated_final_checkpoint": [
+      {"checkpoint_family": "legacy 7k", "stage": "B1", "successes": 9, "episodes": 20, "rate": 0.45},
+      {"checkpoint_family": "legacy 7k", "stage": "B2", "successes": 10, "episodes": 20, "rate": 0.50, "oracle_initialization": true},
+      {"checkpoint_family": "legacy 7k", "stage": "B3", "successes": 3, "episodes": 20, "rate": 0.15, "oracle_initialization": true}
+    ]
+  },
   "single_orange_horizon_sweep": [
     {"chunk": 25, "successes": 4, "episodes": 20, "rate": 0.20},
     {"chunk": 50, "successes": 4, "episodes": 20, "rate": 0.20},
