@@ -37,6 +37,12 @@ experimental system: it makes data validity, protocol changes, initialization
 provenance and closed-loop failure modes inspectable instead of hiding them
 behind a single success rate.
 
+> **Claim boundary:** in the current `native_horizon` sample, A1 produced 3/20
+> full-task successes while A0 produced 0/20. A0 ran for 1,020 policy actions
+> and A1 for 1,260. The matched-horizon evaluator is implemented, but no formal
+> matched 20-episode result is reported. This is an observed sample outcome,
+> not evidence of statistically conclusive superiority.
+
 ## Project at a glance
 
 | Dimension | Implementation |
@@ -104,7 +110,7 @@ B3 filtering and a non-paired initialization sequence. See the
 
 ## Key findings
 
-### 1. Modularization produced observed full-task successes
+### 1. A1 produced successes not observed for A0 in this sample
 
 The final native-horizon benchmark used 20 episodes for every configuration.
 A0 executes 1,020 policy actions; A1 executes 420 actions per stage, or 1,260
@@ -126,7 +132,7 @@ The A1 run produced successes that were not observed for A0, but this does not
 establish statistically conclusive superiority: native horizons are unmatched
 and the Wilson interval for 3/20 is wide (5.2–36.0%).
 
-### 2. Primitive competence did not compose cleanly
+### 2. Primitive reliability is itself a bottleneck
 
 ![Isolated primitive results](assets/isolated-primitive-results.svg)
 
@@ -135,9 +141,12 @@ oranges are synthesized in the plate and the robot begins from the expert
 subtask start state. These numbers are therefore capability upper bounds, not
 sequential task success rates.
 
-At 14k steps, B1/B2/B3 achieved 30%/45%/30%. Yet the complete A1 task achieved
-15%, consistent with compounding primitive error and start-state shift between
-stages. This is an interpretation of the measurements, not proof of causality.
+At 14k steps, B1/B2/B3 achieved only 30%/45%/30%. B1 uses the normal task
+initialization; B2/B3 use oracle initialization and are upper bounds under
+easier start states. No primitive exceeded 45%, so end-to-end failure cannot be
+attributed only to long-horizon composition. Low-level contact and grasp
+reliability remain bottlenecks alongside compounding error and stage-start
+shift. This is an interpretation of the measurements, not proof of causality.
 
 ### 3. The dataset itself was audited, not assumed correct
 
@@ -245,9 +254,12 @@ tools/         deterministic chart and public-repository validation scripts
 - `0/20` means no success was observed, not that the true success probability is
   mathematically zero.
 - A0 and A1 native horizons differ. A matched-horizon mode exists but was not
-  substituted for the historical benchmark.
+  substituted for the historical benchmark, and no formal matched 20-episode
+  result is available.
 - Isolated B2/B3 use oracle initialization and must not be compared as if they
   were end-to-end rollouts.
+- G4 primitive success is 30%/45%/30%; composition is not the only unresolved
+  problem because the underlying primitives are themselves unreliable.
 - No 50-demo result is reported: that extension was cancelled before use, so
   this repository is strictly the 30-demo study.
 

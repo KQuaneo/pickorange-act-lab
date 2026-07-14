@@ -37,6 +37,8 @@ def check_summary(errors: list[str]) -> None:
         fail("Native horizons must remain explicitly unmatched", errors)
     if data["evaluation"]["matched_horizon"]["enabled_by_default"]:
         fail("Matched horizon must remain opt-in", errors)
+    if data["evaluation"]["matched_horizon"]["formal_20_episode_result_available"]:
+        fail("No formal matched-horizon 20-episode result should be claimed", errors)
     if data["evaluated_rollout_inventory"]["total"] != 1020:
         fail("Unexpected historical rollout inventory", errors)
     if len(data["final_full_task"]) != 6 or any(row["checkpoint"] in {"21k", "7k"} for row in data["final_full_task"]):
