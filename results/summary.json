@@ -26,7 +26,8 @@
       "a0_theoretical_seconds": 42.0,
       "a1_theoretical_seconds": 42.0,
       "same_total_horizon": true,
-      "enabled_by_default": false
+      "enabled_by_default": false,
+      "formal_20_episode_result_available": false
     }
   },
   "model": {

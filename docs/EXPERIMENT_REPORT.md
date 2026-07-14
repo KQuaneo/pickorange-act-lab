@@ -18,14 +18,20 @@ and fixed-time scheduler diagnostics.
 
 The strongest observed full-task result was **3/20 (15%)** from the final A1
 three-policy system. No full success was observed for A0 at any final
-checkpoint. Isolated primitives achieved 30–50%, so primitive capability was
-real but did not compose reliably. A data audit rejected 2/30 B3 slices and
-identified releases after the former 340-action cutoff. These findings led to a
-420-action stage horizon and explicit scheduler-overrun measurement.
+checkpoint. These native-horizon runs used 1,020 A0 actions versus 1,260 A1
+actions; matched-horizon capability exists but has no formal 20-episode result.
+The G4 isolated primitives achieved only 30%/45%/30%, with oracle
+initialization for B2/B3. The underlying primitives therefore remain unreliable
+independently of the sequential composition problem. A data audit rejected 2/30
+B3 slices and identified releases after the former 340-action cutoff. These
+findings led to a 420-action stage horizon and explicit scheduler-overrun
+measurement.
 
 The outcome is a technically meaningful partial success, not a solved task.
 The main contribution is the evidence chain connecting data semantics,
 low-level contact behavior, scheduling, horizon fairness and end-to-end outcome.
+The study does not establish that multi-policy decomposition is statistically
+superior to the monolithic policy.
 
 ## 1. Task and model
 
@@ -231,6 +237,11 @@ The final G4 isolated evaluation was:
 | B2, oracle initialized | 9/20 (45%) |
 | B3, oracle initialized | 6/20 (30%) |
 
+These values are below 50% even in the isolated setting, and B2/B3 benefit from
+oracle initialization. Primitive control is therefore an independent
+reliability bottleneck; the full-task failures should not be attributed solely
+to long-horizon composition.
+
 The independently trained G3 checkpoints are preserved in the
 [experiment index](EXPERIMENT_INDEX.md) as historical evidence. They are not a
 direct baseline because training lineage, B3 dataset semantics and evaluation
@@ -293,10 +304,13 @@ The cancelled 50-demo extension was removed from the active pipeline. No
 
 The evidence supports four measured conclusions:
 
-1. Temporal decomposition produced observed end-to-end successes under the
-   corrected A1 protocol, whereas A0 did not in these evaluation samples.
+1. In the current native-horizon samples, A1 produced 3/20 end-to-end successes
+   whereas A0 produced 0/20. Because the horizons are 1,260 versus 1,020 actions
+   and no formal matched-horizon 20-episode result exists, this is not evidence
+   of statistically conclusive superiority.
 2. Primitive policies remain unreliable even under controlled initialization;
-   this alone makes long sequential success difficult.
+   this is an independent bottleneck, not merely a consequence of long-horizon
+   composition.
 3. Stage transitions are not merely a software detail: success can occur long
    before the fixed boundary, while valid B3 releases can occur after the old
    boundary.
