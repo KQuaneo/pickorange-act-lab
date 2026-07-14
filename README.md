@@ -6,6 +6,7 @@
 [![Isaac Lab](https://img.shields.io/badge/Simulator-Isaac%20Lab-76B900)](https://developer.nvidia.com/isaac/lab)
 [![LeRobot](https://img.shields.io/badge/Policy-LeRobot%20ACT-FFD21E)](https://github.com/huggingface/lerobot)
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
+[![CI](https://github.com/KQuaneo/pickorange-act-lab/actions/workflows/validate.yml/badge.svg)](https://github.com/KQuaneo/pickorange-act-lab/actions/workflows/validate.yml)
 
 [中文说明](README.zh-CN.md) · [Full experiment report](docs/EXPERIMENT_REPORT.md) · [Experiment index](docs/EXPERIMENT_INDEX.md) · [Reproduction guide](docs/REPRODUCIBILITY.md) · [Machine-readable results](results/summary.json)
 
@@ -17,13 +18,24 @@ resilient GPU orchestration, protocol-safe evaluation, and failure diagnosis.
 The project is deliberately honest about negative results: a monolithic ACT
 policy did not achieve a full three-orange success in the final 20-episode
 evaluations, while a modular fixed-time three-policy system reached **3/20
-(15%)**. Isolated primitives reached **30–50%**, showing that both contact-level
+(15%)**. Isolated primitives reached **30–45%**, showing that both contact-level
 robustness and sequential state distribution shift remain limiting factors.
 
 > **Why this is useful:** the repository is not only a model run. It is a
 > reproducible investigation of why offline imitation loss can improve while
 > closed-loop manipulation still fails—and a set of tools for measuring that
 > gap without silently changing the protocol.
+
+## Contribution vs result
+
+| Algorithmic result | Main contribution |
+|---|---|
+| A0: **0/20** full-task successes<br>A1: best **3/20** full-task successes<br>No statistically conclusive superiority claim | Auditable, event-aware data pipeline<br>Protocol truncation bug discovery and correction<br>Long-horizon failure diagnosis<br>Restart-safe training and evaluation infrastructure |
+
+The algorithmic result is intentionally modest. The transferable value is the
+experimental system: it makes data validity, protocol changes, initialization
+provenance and closed-loop failure modes inspectable instead of hiding them
+behind a single success rate.
 
 ## Project at a glance
 
@@ -55,6 +67,21 @@ flowchart LR
     H --> J[Failure analysis and report]
     I --> J
 ```
+
+## Failure-chain hypothesis
+
+```mermaid
+flowchart LR
+    N["Observed<br/>No effect: 195/320"] -.-> C["Working hypothesis<br/>Contact / grasp bottleneck"]
+    C -.-> P["Observed<br/>G4 isolated success: 30% / 45% / 30%"]
+    P -.-> S["Measured<br/>Stage-start distribution shift"]
+    S -.-> F["Observed<br/>Sequential failure: 17/20 at best A1"]
+```
+
+Dashed arrows denote a diagnosis to test, not an identified causal chain. The
+evidence supports contact-level weakness and start-state shift as plausible
+contributors, but the current 20-episode cells cannot isolate their causal
+effects.
 
 ## Four training generations
 
@@ -95,9 +122,9 @@ The primary chart contains only the protocol-consistent G4 benchmark. G3
 results remain available as historical evidence in the
 [complete experiment index](docs/EXPERIMENT_INDEX.md), not as a direct baseline.
 
-The A1 result is evidence that temporal decomposition can help this task, but
-the wide Wilson interval for 3/20 (5.2–36.0%) means it should not be presented
-as a precise estimate of deployment performance.
+The A1 run produced successes that were not observed for A0, but this does not
+establish statistically conclusive superiority: native horizons are unmatched
+and the Wilson interval for 3/20 is wide (5.2–36.0%).
 
 ### 2. Primitive competence did not compose cleanly
 
@@ -164,6 +191,16 @@ only seven pairs and is reported as descriptive—not causal.
 - **Statistical discipline:** Wilson intervals, exact paired tests and bootstrap
   hooks, with oracle and sequential evaluations kept semantically separate.
 
+## Practical outcomes
+
+- Established a reusable ACT experiment template for future LeIsaac tasks.
+- Identified evaluation truncation and invalid expert-data slices before they
+  could be mistaken for policy failures.
+- Added restart-safe orchestration and checkpoint-safe evaluation for long GPU
+  experiments.
+- Produced reusable stage-transition, overrun and initialization diagnostics
+  that can transfer to later simulated or hardware manipulation tasks.
+
 ## Reproduce the analysis
 
 The simulator and model checkpoints are intentionally not vendored. Start from
@@ -174,6 +211,7 @@ and point the commands at local datasets/checkpoints.
 ```bash
 python -m pip install -r requirements-analysis.txt
 python -m pytest experiments/tests -q
+python tools/validate_public_repo.py
 
 # Safe by default: validates code, inputs, horizons, output isolation and
 # checkpoint immutability without launching Isaac.

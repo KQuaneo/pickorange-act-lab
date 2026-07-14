@@ -1,5 +1,7 @@
 # PickOrange-ACT：可审计的长时序具身智能实验
 
+[![CI](https://github.com/KQuaneo/pickorange-act-lab/actions/workflows/validate.yml/badge.svg)](https://github.com/KQuaneo/pickorange-act-lab/actions/workflows/validate.yml)
+
 [English](README.md) · [完整实验报告](docs/EXPERIMENT_REPORT.md) · [全部实验索引](docs/EXPERIMENT_INDEX.md) · [复现说明](docs/REPRODUCIBILITY.md) · [机器可读结果](results/summary.json)
 
 这是一个基于 LeIsaac、Isaac Lab 和 LeRobot ACT 的 SO-101 三橘子长时序
@@ -21,7 +23,28 @@
 - 中间 Gate30 训练在旧 340×3 协议下，A1 5k 和 6k 都出现过 1/20，7k
   回落到 0/20。该结果只保留在历史索引中，不作为最终 420×3 主结果的直接基线。
 
+## 贡献与结果
+
+| 算法结果 | 项目主要贡献 |
+|---|---|
+| A0 完整任务 0/20<br>A1 最佳完整任务 3/20<br>不主张统计上已确定的算法优势 | 可审计、事件驱动的数据流水线<br>发现并修复测评截断协议错误<br>长时序失败诊断<br>可恢复的训练与测评基础设施 |
+
+本项目不依靠 15% 的成功率包装算法突破；核心价值是把数据有效性、测评协议、
+初始化来源和闭环失败链路变成可以复核与复用的工程资产。
+
 ![最终完整任务结果](assets/final-full-task-results.svg)
+
+## 失败链路工作假设
+
+```mermaid
+flowchart LR
+    N["观测<br/>无效果 195/320"] -.-> C["工作假设<br/>接触或抓取瓶颈"]
+    C -.-> P["观测<br/>G4 isolated 30% / 45% / 30%"]
+    P -.-> S["已测量<br/>阶段起点分布漂移"]
+    S -.-> F["观测<br/>最佳 A1 仍失败 17/20"]
+```
+
+虚线表示待验证的诊断假设，而不是已经识别的因果关系。
 
 ## 项目体现的能力
 
@@ -37,6 +60,13 @@
    OOM 后降低并行度、指数退避、磁盘保护和自动衔接下一阶段。
 6. **科研诚信**：保留 0/20 和宽置信区间，不把 isolated oracle 结果包装成
    端到端成功，也不报告已取消的 50-demo 实验。
+
+## 实际产出
+
+- 建立可复用于其他 LeIsaac 任务的 ACT 实验模板。
+- 在把问题误判为策略失败前，发现测评截断和无效专家切片。
+- 为长时间 GPU 实验加入可恢复调度和 checkpoint 安全测评。
+- 产出可迁移到后续仿真或真机任务的阶段切换、overrun 与初始化诊断。
 
 ## 结论
 
