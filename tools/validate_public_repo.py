@@ -39,7 +39,7 @@ def check_summary(errors: list[str]) -> None:
         fail("Matched horizon must remain opt-in", errors)
     if data["evaluation"]["matched_horizon"]["formal_20_episode_result_available"]:
         fail("No formal matched-horizon 20-episode result should be claimed", errors)
-    if data["evaluated_rollout_inventory"]["total"] != 1020:
+    if data["evaluated_rollout_inventory"]["total"] != 1100:
         fail("Unexpected historical rollout inventory", errors)
     if len(data["final_full_task"]) != 6 or any(row["checkpoint"] in {"21k", "7k"} for row in data["final_full_task"]):
         fail("Primary full-task results must contain only the six G4 cells", errors)
@@ -50,6 +50,17 @@ def check_summary(errors: list[str]) -> None:
     gate30 = next(item for item in data["training_generations"] if item["id"] == "G3")
     if gate30["legacy_full_task_results"]["A1"] != {"5k": [1, 20], "6k": [1, 20], "7k": [0, 20]}:
         fail("Unexpected Gate30 legacy checkpoint results", errors)
+    rhc = data["rhc_b1_execution_horizon_ablation"]
+    if rhc["selected_horizon_h_star"] != 100:
+        fail("Unexpected RHC H* selection", errors)
+    if [(row["execution_horizon"], row["successes"]) for row in rhc["results"]] != [
+        (100, 5), (25, 3), (10, 2), (1, 1)
+    ]:
+        fail("Unexpected RHC B1 results", errors)
+    if rhc["pairing"]["status"] != "PAIRING_INVALID":
+        fail("RHC comparison must remain marked as unpaired", errors)
+    if rhc["full_task_followup"]["executed"]:
+        fail("Redundant full-task RHC follow-up must not be claimed", errors)
 
 
 def check_python(errors: list[str]) -> None:
