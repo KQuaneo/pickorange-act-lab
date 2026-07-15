@@ -52,7 +52,7 @@
     },
     {
       "id": "G2",
-      "name": "SingleOrange horizon sweep",
+      "name": "SingleOrange coupled chunk/execution horizon sweep",
       "batch_size": 128,
       "data_split": "24 train / 6 validation",
       "training": "three Orange001 policies to 7k",
@@ -194,7 +194,7 @@
     ],
     "selected_horizon_h_star": 100,
     "selection_rule": ["successes descending", "contact_or_better descending", "median max_lift descending", "larger H"],
-    "conclusion": "No shorter execution horizon improved observed B1 success.",
+    "conclusion": "Without temporal aggregation, no shorter execution horizon improved observed B1 success.",
     "pairing": {
       "status": "PAIRING_INVALID",
       "fully_aligned_episodes": 1,
