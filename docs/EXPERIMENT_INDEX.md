@@ -13,8 +13,9 @@ batch size, horizon and scientific role. “Earlier” does not automatically me
 | G3: Gate30 baseline | A0 to 21k; B1/B2/B3 to 7k | 30 train, batch 64; B3 target-success 29 episodes | 120 legacy-protocol + 40 corrected full-task + 60 isolated rollouts | Include separately as protocol history |
 | G4: doubled strict-prefix | A0 to 42k; B1/B2/B3 to 14k | batch 64; strict B3 28 episodes | 120 full-task + 60 isolated rollouts | Primary final benchmark |
 
-Across these generations, the repository contains summaries for **1,020
-evaluated rollout episodes**. This is an inventory count, not a pooled sample:
+Across training generations and inference-only ablations, the repository
+contains summaries for **1,160 evaluated rollout episodes**. This is an
+inventory count, not a pooled sample:
 the protocols differ and their success rates are never averaged together.
 
 ## Why G3 is worth adding
@@ -47,6 +48,17 @@ not included in the primary chart or table because the initialization sequences
 are not fully paired with G4.
 
 Machine-readable evidence: [`historical-gate30-340.json`](../results/historical-gate30-340.json).
+
+## Inference-only studies
+
+| Study | Episodes | Pairing | Role |
+|---|---:|---|---|
+| Fixed-K RHC, H=100/25/10/1 | 80 | only episode 0 aligned across H | descriptive horizon sweep |
+| H=100 off / H=1 off / H=1 aggregation | 60 | strict physical pairing 20/20 | paired temporal-aggregation ablation |
+
+The paired study observed 5/20, 0/20 and 5/20 respectively. Aggregation
+recovered the plain H=1 success level to the H=100 baseline but did not exceed
+it. See [`TEMPORAL_AGGREGATION.md`](TEMPORAL_AGGREGATION.md).
 
 ## What should stay out of the main comparison
 

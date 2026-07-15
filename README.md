@@ -8,7 +8,7 @@
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 [![CI](https://github.com/KQuaneo/pickorange-act-lab/actions/workflows/validate.yml/badge.svg)](https://github.com/KQuaneo/pickorange-act-lab/actions/workflows/validate.yml)
 
-[中文说明](README.zh-CN.md) · [Full experiment report](docs/EXPERIMENT_REPORT.md) · [Experiment index](docs/EXPERIMENT_INDEX.md) · [Reproduction guide](docs/REPRODUCIBILITY.md) · [Machine-readable results](results/summary.json)
+[中文说明](README.zh-CN.md) · [Full experiment report](docs/EXPERIMENT_REPORT.md) · [Paired temporal aggregation](docs/TEMPORAL_AGGREGATION.md) · [Experiment index](docs/EXPERIMENT_INDEX.md) · [Reproduction guide](docs/REPRODUCIBILITY.md) · [Machine-readable results](results/summary.json)
 
 PickOrange-ACT is an end-to-end embodied-AI experiment on a difficult
 three-object pick-and-place task in [LeIsaac](https://github.com/LightwheelAI/leisaac).
@@ -55,7 +55,7 @@ behind a single success rate.
 | Demonstrations | 30 expert episodes, audited after event-based slicing |
 | Final training | Batch 64; A0 42k steps; each A1 primitive 14k steps |
 | Formal evaluation | 20 episodes/configuration, seed 2026, Wilson 95% intervals |
-| Evaluation inventory | 1,100 rollout episodes across historical, diagnostic and final protocols |
+| Evaluation inventory | 1,160 rollout episodes across historical, diagnostic and final protocols |
 | Main comparison | A0 monolithic policy vs A1 three-policy fixed-time scheduler |
 
 ```mermaid
@@ -209,6 +209,30 @@ planned `H=100` baseline against `H*` would execute the same controller twice
 and add no new experimental cell. This decision does not fill the separate
 native-versus-matched total-horizon gap described above.
 
+### 6. Temporal aggregation recovered H=1 to the paired H=100 level
+
+A final inference-only study reused one fixed manifest of 20 simulator starts
+to compare `H=100` without aggregation, `H=1` without aggregation, and `H=1`
+with LeRobot ACT temporal aggregation (`coeff=0.01`). Unlike the earlier RHC
+sweep, initialization IDs and restored robot/object/plate states matched for
+all 20 episodes.
+
+![Strictly paired temporal-aggregation result](assets/temporal-aggregation-three-way.svg)
+
+| Controller | B1 success | Wilson 95% | Contact-or-better | Calls/episode |
+|---|---:|---:|---:|---:|
+| `H=100`, aggregation off | 5/20 | 11.2–46.9% | 13/20 | 5 |
+| `H=1`, aggregation off | 0/20 | 0.0–16.1% | 7/20 | 420 |
+| `H=1`, aggregation 0.01 | 5/20 | 11.2–46.9% | 7/20 | 420 |
+
+Aggregation produced five successes not observed for plain H=1 (exact McNemar
+`p=0.0625`). Against H=100, both methods achieved 5/20; three successes were
+shared and each had two exclusive successes (`p=1.0`). The supported claim is
+therefore narrow: aggregation restored the observed H=1 success level to the
+paired H=100 baseline, but did not outperform it. See the
+[paired analysis](docs/TEMPORAL_AGGREGATION.md) for max lift, failure taxonomy,
+action variation and episode-level transitions.
+
 ## Engineering contributions
 
 - **Event-aware data preparation:** slices are based on stable pick/place events
@@ -290,6 +314,9 @@ tools/         deterministic chart and public-repository validation scripts
   this repository is strictly the 30-demo study.
 - The RHC B1 sweep is descriptive rather than paired because initialization
   alignment failed after episode 0; `H*=100` is an exploratory selection.
+- The later temporal-aggregation comparison is physically paired 20/20, but
+  separate Isaac launches were not pixel-identical. Its 20-episode result is a
+  checkpoint-specific observation, not a general ACT controller ranking.
 
 ## Background and attribution
 

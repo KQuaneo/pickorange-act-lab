@@ -160,6 +160,21 @@ python tools/render_result_charts.py
 The chart generator uses only the Python standard library and reads
 `results/summary.json`.
 
+The three-way temporal-aggregation analyzer operates on full evaluator output
+directories and verifies 20 episodes, policy-call boundaries, checkpoint
+immutability and physical-state pairing before writing statistics:
+
+```bash
+python experiments/analyze_temporal_three_way.py \
+  --h100-off /path/to/h100_no_aggregation_paired \
+  --h1-off /path/to/h1_no_aggregation \
+  --h1-aggregation /path/to/h1_temporal_aggregation_001 \
+  --output /path/to/analysis_three_way
+```
+
+The repository vendors the resulting sanitized summary and 20-row paired
+episode table, but not checkpoints or full simulator logs.
+
 ## Reproducibility boundary
 
 This repository publishes code, configuration, sanitized evaluation records,
@@ -167,4 +182,3 @@ figures and representative media. It intentionally omits simulator assets,
 expert datasets, checkpoints and large runtime outputs. As a result, readers can
 fully verify the reported tables and analysis code, but cannot rerun policies
 without obtaining compatible LeIsaac assets and local model/data artifacts.
-
