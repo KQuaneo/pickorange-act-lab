@@ -80,9 +80,10 @@ The completed work contains four training generations rather than one run:
 | G3 | batch-64 Gate30 A0 to 21k and B1/B2/B3 to 7k | legacy 340-action history; final checkpoints also re-evaluated at 420 |
 | G4 | batch-64 A0 to 42k and strict-prefix B1/B2/B3 to 14k | primary final benchmark |
 
-The summaries cover 1,020 rollout episodes across historical, diagnostic and
-final protocols. This demonstrates evaluation scope but is not one statistical
-sample; rates are never pooled across incompatible cells.
+The summaries cover 1,100 rollout episodes across historical, diagnostic and
+final protocols, including the 80-episode fixed-K RHC inference sweep. This
+demonstrates evaluation scope but is not one statistical sample; rates are
+never pooled across incompatible cells.
 
 G3 A1 produced 1/20 full success at 5k and 6k per primitive under the legacy
 340×3 protocol, followed by 0/20 at 7k. This evidence is worth preserving
@@ -283,6 +284,39 @@ small and one normalized stage-deviation family is numerically sensitive to
 near-zero expert variance. The result is therefore retained only as a
 descriptive diagnostic; no causal or robust inferential claim is made.
 
+### 3.10 Fixed-K receding-horizon inference ablation
+
+The final inference-only ablation held the trained G4 B1 14k policy and its
+prediction chunk size fixed at `K=100`, disabled temporal ensembling, and varied
+only the executed prefix `H in {100, 25, 10, 1}`. Every cell used 420 policy
+actions, two simulation steps per action, seed 2026 and 20 episodes.
+
+| H | Success | Wilson 95% | Contact-or-better | Calls | Discarded predictions | Mean wall time |
+|---:|---:|---:|---:|---:|---:|---:|
+| 100 | **5/20** | 11.2–46.9% | 12/20 | 100 | 1,600 | 33.84s |
+| 25 | 3/20 | 5.2–36.0% | 15/20 | 340 | 25,600 | 33.45s |
+| 10 | 2/20 | 2.8–30.1% | 14/20 | 840 | 75,600 | 30.54s |
+| 1 | 1/20 | 0.9–23.6% | 7/20 | 8,400 | 831,600 | 49.43s |
+
+The pre-registered selection order—success count, contact-or-better count,
+median maximum lift, then larger H—selected `H*=100`. Thus no shorter execution
+horizon improved observed B1 success, while aggressive replanning greatly
+increased inference and discarded-action cost. For H=1, the one evaluator
+success was inside the plate at the final step but had not remained there for
+the separate ten-step stable-placement diagnostic; the raw taxonomy therefore
+labels it `high_lift_without_placement` rather than `final_success`.
+
+This comparison is not paired. Only episode 0 shared the same initialization
+ID and raw start state across every H; subsequent reset states diverged.
+Paired McNemar/bootstrap tests were consequently prohibited, and the observed
+rates are reported descriptively with Wilson intervals.
+
+The planned full A0/A1 follow-up was not executed. Because `H*=100`, the
+pre-planned comparison of the existing `H=100` controller against `H*` would
+duplicate the baseline exactly rather than test a new controller. This avoids
+redundant simulator runs but does not resolve the distinct A0/A1
+native-versus-matched total-horizon limitation.
+
 ## 4. Automation and operational reliability
 
 Long-running work was executed under tmux with a supervisor and live status
@@ -302,7 +336,7 @@ The cancelled 50-demo extension was removed from the active pipeline. No
 
 ## 5. Interpretation
 
-The evidence supports four measured conclusions:
+The evidence supports five measured conclusions:
 
 1. In the current native-horizon samples, A1 produced 3/20 end-to-end successes
    whereas A0 produced 0/20. Because the horizons are 1,260 versus 1,020 actions
@@ -317,6 +351,9 @@ The evidence supports four measured conclusions:
 4. Dataset semantics materially affect the experiment. A small nominal dataset
    required strict-prefix filtering and exposure accounting at the frame/window
    level.
+5. In the fixed-K B1 inference ablation, shorter replanning horizons did not
+   improve observed success; `H*=100` was selected, and cross-H results remain
+   descriptive because initialization pairing failed after episode 0.
 
 The experiment does not prove that fixed-time overrun causes the next stage to
 fail, that A1 is statistically superior in general, or that the policies will
@@ -332,7 +369,8 @@ transfer to hardware.
    only after primitive reliability improves.
 4. Increase demonstration diversity around failed contact modes rather than
    only increasing identical trajectory count.
-5. Separate ACT chunk size from execution horizon in a controlled ablation.
+5. Repeat the fixed-K RHC study with truly paired reset states and independent
+   seeds before drawing a general execution-horizon conclusion.
 6. Add closed-loop gripper/contact logic or a residual controller and compare
    against the current position-only execution.
 7. Evaluate on physical SO-101 hardware before making any sim-to-real claim.
