@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "project": "PickOrange-ACT",
   "task": "Three-object long-horizon pick-and-place with an SO-101 arm",
   "environment": "LeIsaac-SO101-PickOrange-v0",
@@ -96,7 +96,8 @@
     "G4_full_task": 120,
     "G4_isolated": 60,
     "RHC_B1_fixed_K_sweep": 80,
-    "total": 1100,
+    "temporal_aggregation_B1_strictly_paired": 60,
+    "total": 1160,
     "note": "Counts evaluation episodes across distinct historical, diagnostic and final protocols; they are not pooled into one success rate."
   },
   "data": {
@@ -204,5 +205,27 @@
       "reason": "H*=100, so the planned H=100 versus H* follow-up would duplicate the baseline.",
       "matched_total_horizon_gap_resolved": false
     }
+  },
+  "temporal_aggregation_b1_paired": {
+    "status": "STRICT_PHYSICAL_PAIRING_20_OF_20",
+    "checkpoint": "G4 A1-B1 14k",
+    "prediction_chunk_size_k": 100,
+    "policy_actions_per_episode": 420,
+    "sim_steps_per_action": 2,
+    "episodes_per_group": 20,
+    "seed": 2026,
+    "groups": [
+      {"name": "H100_off", "execution_horizon": 100, "temporal_aggregation": false, "successes": 5, "episodes": 20, "rate": 0.25, "wilson95": [0.1119, 0.4687], "max_lift_mean_m": 0.04273, "max_lift_median_m": 0.00571, "contact_or_better": 13, "action_jitter_l2_mean": 0.03051, "policy_calls_per_episode": 5, "rollout_wall_time_mean_s": 35.23, "failure_taxonomy": {"no_effect": 7, "contact_or_tiny_lift": 8, "final_success": 5}},
+      {"name": "H1_off", "execution_horizon": 1, "temporal_aggregation": false, "successes": 0, "episodes": 20, "rate": 0.0, "wilson95": [0.0, 0.1611], "max_lift_mean_m": 0.01208, "max_lift_median_m": 0.0, "contact_or_better": 7, "action_jitter_l2_mean": 0.01321, "policy_calls_per_episode": 420, "rollout_wall_time_mean_s": 47.92, "failure_taxonomy": {"no_effect": 13, "contact_or_tiny_lift": 6, "high_lift_without_placement": 1}},
+      {"name": "H1_aggregation_001", "execution_horizon": 1, "temporal_aggregation": true, "temporal_ensemble_coeff": 0.01, "successes": 5, "episodes": 20, "rate": 0.25, "wilson95": [0.1119, 0.4687], "max_lift_mean_m": 0.04183, "max_lift_median_m": 0.00445, "contact_or_better": 7, "action_jitter_l2_mean": 0.02035, "policy_calls_per_episode": 420, "rollout_wall_time_mean_s": 48.03, "failure_taxonomy": {"no_effect": 13, "contact_or_tiny_lift": 2, "final_success": 5}}
+    ],
+    "triple_success_transition_h100off_h1off_h1aggregation": {"000": 13, "101": 3, "100": 2, "001": 2},
+    "pairwise_exact_mcnemar": {
+      "H100_off_vs_H1_off": {"left_success_right_failure": 5, "left_failure_right_success": 0, "p_two_sided": 0.0625},
+      "H100_off_vs_H1_aggregation_001": {"left_success_right_failure": 2, "left_failure_right_success": 2, "p_two_sided": 1.0},
+      "H1_off_vs_H1_aggregation_001": {"left_success_right_failure": 0, "left_failure_right_success": 5, "p_two_sided": 0.0625}
+    },
+    "conclusion": "Temporal aggregation restored observed H=1 success from 0/20 to 5/20, matching but not outperforming the paired H=100 baseline. The 20-episode sample does not establish a generally optimal controller.",
+    "rendering_caveat": "Initialization IDs, serialized simulator state, restored physical state and refresh protocol were paired. Separate Isaac launches were not pixel-identical."
   }
 }

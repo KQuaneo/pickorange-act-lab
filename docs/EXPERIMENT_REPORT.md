@@ -80,8 +80,9 @@ The completed work contains four training generations rather than one run:
 | G3 | batch-64 Gate30 A0 to 21k and B1/B2/B3 to 7k | legacy 340-action history; final checkpoints also re-evaluated at 420 |
 | G4 | batch-64 A0 to 42k and strict-prefix B1/B2/B3 to 14k | primary final benchmark |
 
-The summaries cover 1,100 rollout episodes across historical, diagnostic and
-final protocols, including the 80-episode fixed-K RHC inference sweep. This
+The summaries cover 1,160 rollout episodes across historical, diagnostic and
+final protocols, including the 80-episode fixed-K RHC sweep and 60-episode
+strictly paired temporal-aggregation comparison. This
 demonstrates evaluation scope but is not one statistical sample; rates are
 never pooled across incompatible cells.
 
@@ -317,6 +318,39 @@ duplicate the baseline exactly rather than test a new controller. This avoids
 redundant simulator runs but does not resolve the distinct A0/A1
 native-versus-matched total-horizon limitation.
 
+### 3.11 Strictly paired temporal aggregation
+
+The final inference ablation reused one validated 20-state manifest for three
+controllers: H=100 without aggregation, H=1 without aggregation, and H=1 with
+LeRobot ACT temporal aggregation at coefficient 0.01. All groups used the G4
+B1 14k checkpoint, K=100, 420 executed actions and seed 2026.
+
+| Controller | Success | Wilson 95% | Mean/median max lift | Contact-or-better | Calls/episode |
+|---|---:|---:|---:|---:|---:|
+| H=100 off | 5/20 | 11.2–46.9% | 0.0427/0.0057 m | 13/20 | 5 |
+| H=1 off | 0/20 | 0.0–16.1% | 0.0121/0.0000 m | 7/20 | 420 |
+| H=1 aggregation 0.01 | 5/20 | 11.2–46.9% | 0.0418/0.0045 m | 7/20 | 420 |
+
+![Strictly paired temporal aggregation](../assets/temporal-aggregation-three-way.svg)
+
+The episode transition `(H100 off, H1 off, H1 aggregation)` was `000` for 13
+episodes, `101` for three, `100` for two and `001` for two. Aggregation versus
+plain H=1 had five favorable and zero unfavorable success transitions (exact
+McNemar `p=0.0625`). Aggregation versus H=100 had two exclusive successes in
+each direction (`p=1.0`). Mean paired max lift changed by +0.02976 m relative
+to plain H=1 and -0.00089 m relative to H=100.
+
+Thus aggregation recovered the observed H=1 success level but did not exceed
+the paired H=100 baseline. H=100 also reached contact-or-better more often,
+while plain H=1 had the lowest action-delta metric and no final successes. The
+controllers therefore differ in behavior even where aggregate success ties.
+See the [dedicated report](TEMPORAL_AGGREGATION.md).
+
+Physical-state pairing passed 20/20, including initialization ID, serialized
+robot/object/plate state and refresh protocol. Separate Isaac launches were not
+pixel-identical; this is retained as a rendering caveat rather than silently
+presented as exact image pairing.
+
 ## 4. Automation and operational reliability
 
 Long-running work was executed under tmux with a supervisor and live status
@@ -336,7 +370,7 @@ The cancelled 50-demo extension was removed from the active pipeline. No
 
 ## 5. Interpretation
 
-The evidence supports five measured conclusions:
+The evidence supports six measured conclusions:
 
 1. In the current native-horizon samples, A1 produced 3/20 end-to-end successes
    whereas A0 produced 0/20. Because the horizons are 1,260 versus 1,020 actions
@@ -354,6 +388,9 @@ The evidence supports five measured conclusions:
 5. In the fixed-K B1 inference ablation, shorter replanning horizons did not
    improve observed success; `H*=100` was selected, and cross-H results remain
    descriptive because initialization pairing failed after episode 0.
+6. Under the later 20-state paired protocol, temporal aggregation recovered
+   H=1 from 0/20 to 5/20, matching but not outperforming H=100. This narrows the
+   control diagnosis without establishing a generally optimal controller.
 
 The experiment does not prove that fixed-time overrun causes the next stage to
 fail, that A1 is statistically superior in general, or that the policies will
@@ -369,8 +406,8 @@ transfer to hardware.
    only after primitive reliability improves.
 4. Increase demonstration diversity around failed contact modes rather than
    only increasing identical trajectory count.
-5. Repeat the fixed-K RHC study with truly paired reset states and independent
-   seeds before drawing a general execution-horizon conclusion.
+5. Replicate the paired H=100/H=1/aggregation comparison with independent seeds
+   before drawing a general execution-horizon or ensembling conclusion.
 6. Add closed-loop gripper/contact logic or a residual controller and compare
    against the current position-only execution.
 7. Evaluate on physical SO-101 hardware before making any sim-to-real claim.
@@ -383,3 +420,4 @@ transfer to hardware.
 - Strict B3 audit: [`experiments/audit_pick_orange_b3_slices.py`](../experiments/audit_pick_orange_b3_slices.py)
 - Statistical helpers: [`experiments/pick_orange_analysis.py`](../experiments/pick_orange_analysis.py)
 - Resilient pipeline: [`experiments/run_pick_orange_30_only_pipeline.py`](../experiments/run_pick_orange_30_only_pipeline.py)
+- Paired temporal aggregation: [`TEMPORAL_AGGREGATION.md`](TEMPORAL_AGGREGATION.md)

@@ -39,7 +39,7 @@ def check_summary(errors: list[str]) -> None:
         fail("Matched horizon must remain opt-in", errors)
     if data["evaluation"]["matched_horizon"]["formal_20_episode_result_available"]:
         fail("No formal matched-horizon 20-episode result should be claimed", errors)
-    if data["evaluated_rollout_inventory"]["total"] != 1100:
+    if data["evaluated_rollout_inventory"]["total"] != 1160:
         fail("Unexpected historical rollout inventory", errors)
     if len(data["final_full_task"]) != 6 or any(row["checkpoint"] in {"21k", "7k"} for row in data["final_full_task"]):
         fail("Primary full-task results must contain only the six G4 cells", errors)
@@ -61,6 +61,22 @@ def check_summary(errors: list[str]) -> None:
         fail("RHC comparison must remain marked as unpaired", errors)
     if rhc["full_task_followup"]["executed"]:
         fail("Redundant full-task RHC follow-up must not be claimed", errors)
+    temporal = data["temporal_aggregation_b1_paired"]
+    if temporal["status"] != "STRICT_PHYSICAL_PAIRING_20_OF_20":
+        fail("Temporal-aggregation comparison must remain strictly paired", errors)
+    if [(row["name"], row["successes"]) for row in temporal["groups"]] != [
+        ("H100_off", 5), ("H1_off", 0), ("H1_aggregation_001", 5)
+    ]:
+        fail("Unexpected paired temporal-aggregation results", errors)
+    if temporal["pairwise_exact_mcnemar"]["H100_off_vs_H1_aggregation_001"]["p_two_sided"] != 1.0:
+        fail("Unexpected H=100 versus aggregation paired result", errors)
+    paired_rows = [
+        json.loads(line)
+        for line in (ROOT / "results/raw/temporal_aggregation_paired_episodes.jsonl").read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    if len(paired_rows) != 20 or len({row["initialization_id"] for row in paired_rows}) != 20:
+        fail("Expected 20 unique paired temporal-aggregation episode rows", errors)
 
 
 def check_python(errors: list[str]) -> None:

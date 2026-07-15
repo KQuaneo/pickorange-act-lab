@@ -15,6 +15,7 @@ They expect to run from a compatible LeIsaac project root.
 | `prepare_strict_prefix_gate3.py` | Strict-prefix Gate 3 preparation |
 | `pick_orange_analysis.py` | Dependency-light statistics and pairing helpers |
 | `analyze_pick_orange_results.py` | Paired and two-level result analysis |
+| `analyze_temporal_three_way.py` | Strictly paired H=100/H=1/temporal-aggregation analysis |
 | `smoke_pick_orange_eval_protocol.py` | Dry-by-default protocol and resource-safety smoke test |
 | `run_pick_orange_30_only_pipeline.py` | Persistent retrying eval-to-report state machine |
 | `status_pick_orange_30_only.py` | Atomic live status writer |
@@ -30,4 +31,3 @@ They expect to run from a compatible LeIsaac project root.
   use.
 - The code intentionally does not contain datasets, checkpoints, simulator
   assets or an environment activation script.
-

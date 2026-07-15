@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+<title id="title">Strictly paired B1 temporal aggregation</title>
+<desc id="desc">H=100 without aggregation and H=1 with aggregation each succeeded in 5 of 20 paired episodes. Plain H=1 succeeded in 0 of 20.</desc>
+<rect width="960" height="520" rx="18" fill="#0b1220"/>
+<text x="92.0" y="42.0" text-anchor="start" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="500" fill="#e5e7eb">Strictly paired B1 inference control</text>
+<text x="92.0" y="68.0" text-anchor="start" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">K=100 · 20 shared initial states · Wilson 95% intervals</text>
+<line x1="92" y1="396.0" x2="900" y2="396.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="401.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">0%</text>
+<line x1="92" y1="336.0" x2="900" y2="336.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="341.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">10%</text>
+<line x1="92" y1="276.0" x2="900" y2="276.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="281.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">20%</text>
+<line x1="92" y1="216.0" x2="900" y2="216.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="221.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">30%</text>
+<line x1="92" y1="156.0" x2="900" y2="156.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="161.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">40%</text>
+<line x1="92" y1="96.0" x2="900" y2="96.0" stroke="#334155" stroke-width="1"/>
+<text x="78.0" y="101.0" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">50%</text>
+<rect x="188.7" y="246.0" width="76" height="150.0" rx="6" fill="#94a3b8"/>
+<line x1="226.66666666666666" y1="114.8" x2="226.66666666666666" y2="328.9" stroke="#f8fafc" stroke-width="2"/>
+<line x1="217.66666666666666" y1="114.8" x2="235.66666666666666" y2="114.8" stroke="#f8fafc" stroke-width="2"/>
+<line x1="217.66666666666666" y1="328.9" x2="235.66666666666666" y2="328.9" stroke="#f8fafc" stroke-width="2"/>
+<text x="226.7" y="234.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500" fill="#e5e7eb">5/20</text>
+<text x="226.7" y="427.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="400" fill="#e5e7eb">H=100 off</text>
+<text x="226.7" y="450.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">5 calls/episode</text>
+<rect x="458.0" y="396.0" width="76" height="2.0" rx="6" fill="#f59e0b"/>
+<line x1="496.0" y1="299.3" x2="496.0" y2="396.0" stroke="#f8fafc" stroke-width="2"/>
+<line x1="487.0" y1="299.3" x2="505.0" y2="299.3" stroke="#f8fafc" stroke-width="2"/>
+<line x1="487.0" y1="396.0" x2="505.0" y2="396.0" stroke="#f8fafc" stroke-width="2"/>
+<text x="496.0" y="384.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500" fill="#e5e7eb">0/20</text>
+<text x="496.0" y="427.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="400" fill="#e5e7eb">H=1 off</text>
+<text x="496.0" y="450.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">420 calls/episode</text>
+<rect x="727.3" y="246.0" width="76" height="150.0" rx="6" fill="#38bdf8"/>
+<line x1="765.3333333333333" y1="114.8" x2="765.3333333333333" y2="328.9" stroke="#f8fafc" stroke-width="2"/>
+<line x1="756.3333333333333" y1="114.8" x2="774.3333333333333" y2="114.8" stroke="#f8fafc" stroke-width="2"/>
+<line x1="756.3333333333333" y1="328.9" x2="774.3333333333333" y2="328.9" stroke="#f8fafc" stroke-width="2"/>
+<text x="765.3" y="234.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500" fill="#e5e7eb">5/20</text>
+<text x="765.3" y="427.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="400" fill="#e5e7eb">H=1 + aggregation</text>
+<text x="765.3" y="450.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">420 calls/episode</text>
+<text x="496.0" y="486.0" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">Aggregation matched H=100 success; it did not outperform it (paired McNemar p=1.0)</text>
+</svg>

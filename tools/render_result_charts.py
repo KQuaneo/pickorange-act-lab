@@ -115,12 +115,52 @@ def isolated(data: dict) -> str:
     )
 
 
+def temporal_aggregation(data: dict) -> str:
+    rows = data["temporal_aggregation_b1_paired"]["groups"]
+    labels = ["H=100 off", "H=1 off", "H=1 + aggregation"]
+    colors = ["#94a3b8", "#f59e0b", "#38bdf8"]
+    width, height = 960, 520
+    left, top, plot_w, plot_h = 92, 96, 808, 300
+    ymax = 0.50
+    out = [text(left, 42, "Strictly paired B1 inference control", size=22, anchor="start", weight=500)]
+    out.append(text(left, 68, "K=100 · 20 shared initial states · Wilson 95% intervals", size=13, anchor="start", fill="#9ca3af"))
+    for tick in range(0, 51, 10):
+        y = top + plot_h * (1 - tick / 50)
+        out.append(f'<line x1="{left}" y1="{y:.1f}" x2="{left + plot_w}" y2="{y:.1f}" stroke="#334155" stroke-width="1"/>')
+        out.append(text(left - 14, y + 5, f"{tick}%", size=12, anchor="end", fill="#9ca3af"))
+    group_w = plot_w / len(rows)
+    for index, (row, label, color) in enumerate(zip(rows, labels, colors)):
+        center = left + group_w * (index + 0.5)
+        rate = row["rate"]
+        y = top + plot_h * (1 - rate / ymax)
+        base = top + plot_h
+        out.append(f'<rect x="{center-38:.1f}" y="{y:.1f}" width="76" height="{max(2, base-y):.1f}" rx="6" fill="{color}"/>')
+        low, high = row["wilson95"]
+        low_y = top + plot_h * (1 - low / ymax)
+        high_y = top + plot_h * (1 - high / ymax)
+        out.append(f'<line x1="{center}" y1="{high_y:.1f}" x2="{center}" y2="{low_y:.1f}" stroke="#f8fafc" stroke-width="2"/>')
+        out.append(f'<line x1="{center-9}" y1="{high_y:.1f}" x2="{center+9}" y2="{high_y:.1f}" stroke="#f8fafc" stroke-width="2"/>')
+        out.append(f'<line x1="{center-9}" y1="{low_y:.1f}" x2="{center+9}" y2="{low_y:.1f}" stroke="#f8fafc" stroke-width="2"/>')
+        out.append(text(center, max(top + 16, y - 12), f'{row["successes"]}/20', size=14, weight=500))
+        out.append(text(center, top + plot_h + 31, label, size=13))
+        out.append(text(center, top + plot_h + 54, f'{row["policy_calls_per_episode"]} calls/episode', size=12, fill="#9ca3af"))
+    out.append(text(left + plot_w / 2, height - 34, "Aggregation matched H=100 success; it did not outperform it (paired McNemar p=1.0)", size=13, fill="#9ca3af"))
+    return document(
+        "Strictly paired B1 temporal aggregation",
+        "H=100 without aggregation and H=1 with aggregation each succeeded in 5 of 20 paired episodes. Plain H=1 succeeded in 0 of 20.",
+        out,
+        width,
+        height,
+    )
+
+
 def main() -> None:
     data = json.loads(SUMMARY.read_text(encoding="utf-8"))
     ASSETS.mkdir(parents=True, exist_ok=True)
     (ASSETS / "final-full-task-results.svg").write_text(full_task(data), encoding="utf-8")
     (ASSETS / "isolated-primitive-results.svg").write_text(isolated(data), encoding="utf-8")
-    print("Rendered 2 charts from results/summary.json")
+    (ASSETS / "temporal-aggregation-three-way.svg").write_text(temporal_aggregation(data), encoding="utf-8")
+    print("Rendered 3 charts from results/summary.json")
 
 
 if __name__ == "__main__":
