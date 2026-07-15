@@ -95,7 +95,8 @@
     "G3_isolated_final_checkpoint": 60,
     "G4_full_task": 120,
     "G4_isolated": 60,
-    "total": 1020,
+    "RHC_B1_fixed_K_sweep": 80,
+    "total": 1100,
     "note": "Counts evaluation episodes across distinct historical, diagnostic and final protocols; they are not pooled into one success rate."
   },
   "data": {
@@ -173,5 +174,35 @@
     "orange002": {"n": 4, "mean": 89.75, "median": 87.5, "q25": 81.5, "q75": 95.75, "prefix_destroyed": 0},
     "orange003": {"n": 7, "mean": 97.71, "median": 103.0, "q25": 27.5, "q75": 120.0, "prefix_destroyed": 0},
     "next_stage_deviation_correlation": {"pairs": 7, "pearson_r": 0.6317523851, "interpretation": "descriptive only; no causal claim"}
+  },
+  "rhc_b1_execution_horizon_ablation": {
+    "status": "RHC_B1_SWEEP_COMPLETE",
+    "selection_status": "H_STAR_SELECTED",
+    "checkpoint": "G4 A1-B1 14k",
+    "prediction_chunk_size_k": 100,
+    "temporal_ensembling": false,
+    "policy_actions_per_episode": 420,
+    "sim_steps_per_action": 2,
+    "episodes_per_horizon": 20,
+    "seed": 2026,
+    "results": [
+      {"execution_horizon": 100, "successes": 5, "episodes": 20, "rate": 0.25, "wilson95": [0.1119, 0.4687], "contact_or_better": 12, "policy_calls_total": 100, "discarded_actions_total": 1600, "rollout_wall_time_mean_s": 33.84},
+      {"execution_horizon": 25, "successes": 3, "episodes": 20, "rate": 0.15, "wilson95": [0.0524, 0.3604], "contact_or_better": 15, "policy_calls_total": 340, "discarded_actions_total": 25600, "rollout_wall_time_mean_s": 33.45},
+      {"execution_horizon": 10, "successes": 2, "episodes": 20, "rate": 0.10, "wilson95": [0.0279, 0.3010], "contact_or_better": 14, "policy_calls_total": 840, "discarded_actions_total": 75600, "rollout_wall_time_mean_s": 30.54},
+      {"execution_horizon": 1, "successes": 1, "episodes": 20, "rate": 0.05, "wilson95": [0.0089, 0.2361], "contact_or_better": 7, "policy_calls_total": 8400, "discarded_actions_total": 831600, "rollout_wall_time_mean_s": 49.43, "success_note": "Final-in-plate at the last step, but the separate ten-step stable-placement diagnostic was false."}
+    ],
+    "selected_horizon_h_star": 100,
+    "selection_rule": ["successes descending", "contact_or_better descending", "median max_lift descending", "larger H"],
+    "conclusion": "No shorter execution horizon improved observed B1 success.",
+    "pairing": {
+      "status": "PAIRING_INVALID",
+      "fully_aligned_episodes": 1,
+      "reason": "Only episode 0 had matching initialization IDs and raw start states across all H; paired inference is prohibited."
+    },
+    "full_task_followup": {
+      "executed": false,
+      "reason": "H*=100, so the planned H=100 versus H* follow-up would duplicate the baseline.",
+      "matched_total_horizon_gap_resolved": false
+    }
   }
 }

@@ -55,7 +55,7 @@ behind a single success rate.
 | Demonstrations | 30 expert episodes, audited after event-based slicing |
 | Final training | Batch 64; A0 42k steps; each A1 primitive 14k steps |
 | Formal evaluation | 20 episodes/configuration, seed 2026, Wilson 95% intervals |
-| Evaluation inventory | 1,020 rollout episodes across historical, diagnostic and final protocols |
+| Evaluation inventory | 1,100 rollout episodes across historical, diagnostic and final protocols |
 | Main comparison | A0 monolithic policy vs A1 three-policy fixed-time scheduler |
 
 ```mermaid
@@ -183,6 +183,32 @@ stages that reached stable success. No observed prefix was destroyed during
 those overrun intervals. The correlation with next-stage start deviation uses
 only seven pairs and is reported as descriptive—not causal.
 
+### 5. Receding-horizon replanning did not improve B1
+
+A post-hoc inference ablation fixed the ACT prediction chunk at `K=100` and
+varied only the number of actions executed before replanning. Every setting
+used the G4 B1 14k checkpoint, 420 policy actions and 20 episodes.
+
+| Execution horizon H | B1 success | Wilson 95% | Policy calls | Mean rollout time |
+|---:|---:|---:|---:|---:|
+| 100 | **5/20** | 11.2–46.9% | 100 | 33.84s |
+| 25 | 3/20 | 5.2–36.0% | 340 | 33.45s |
+| 10 | 2/20 | 2.8–30.1% | 840 | 30.54s |
+| 1 | 1/20 | 0.9–23.6% | 8,400 | 49.43s |
+
+The pre-registered lexicographic rule selected `H*=100`; no shorter execution
+horizon improved observed success. Initialization IDs matched across all four
+settings only for episode 0, so the table is a descriptive comparison and no
+paired McNemar/bootstrap claim is made. The `H=1` success was final-in-plate at
+the last step but did not satisfy the separate ten-step stable-placement
+diagnostic, explaining why its failure-taxonomy label is
+`high_lift_without_placement`.
+
+The planned full A0/A1 follow-up was not run: `H*=100`, so comparing the
+planned `H=100` baseline against `H*` would execute the same controller twice
+and add no new experimental cell. This decision does not fill the separate
+native-versus-matched total-horizon gap described above.
+
 ## Engineering contributions
 
 - **Event-aware data preparation:** slices are based on stable pick/place events
@@ -262,6 +288,8 @@ tools/         deterministic chart and public-repository validation scripts
   problem because the underlying primitives are themselves unreliable.
 - No 50-demo result is reported: that extension was cancelled before use, so
   this repository is strictly the 30-demo study.
+- The RHC B1 sweep is descriptive rather than paired because initialization
+  alignment failed after episode 0; `H*=100` is an exploratory selection.
 
 ## Background and attribution
 
