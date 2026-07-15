@@ -9,7 +9,7 @@ batch size, horizon and scientific role. “Earlier” does not automatically me
 | Generation | Trained policies | Data and batch | Evaluation evidence | Decision |
 |---|---|---|---|---|
 | G1: joint6 ablation | A0, A2, B1/B2/B3; A3 reused B policies | 24 train / 6 val, batch 128 | A0–A3 × four checkpoints; B1–B3 isolated; 560 rollouts | Include as diagnostic ablation |
-| G2: SingleOrange | Orange001 horizon 25/50/100 | 24 train / 6 val, batch 128 | 60 rollouts | Include as primitive diagnostic |
+| G2: SingleOrange | Orange001 coupled chunk/execution horizons 25/50/100 | 24 train / 6 val, batch 128 | 60 rollouts | Include as primitive diagnostic |
 | G3: Gate30 baseline | A0 to 21k; B1/B2/B3 to 7k | 30 train, batch 64; B3 target-success 29 episodes | 120 legacy-protocol + 40 corrected full-task + 60 isolated rollouts | Include separately as protocol history |
 | G4: doubled strict-prefix | A0 to 42k; B1/B2/B3 to 14k | batch 64; strict B3 28 episodes | 120 full-task + 60 isolated rollouts | Primary final benchmark |
 

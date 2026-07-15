@@ -62,7 +62,7 @@ by this evaluator.
 | A2 | one ACT plus stage/target features | oracle stage feature | Is stage ambiguity the main problem? |
 | A3 | reuse A1 primitive policies | privileged success detector | Does event-triggered switching help? |
 | B1/B2/B3 | isolated A1 primitives | B2/B3 oracle initialized | What is the primitive capability ceiling? |
-| C0/C1 | single-orange ACT | chunk/horizon sweep | Is local execution horizon the bottleneck? |
+| C0/C1 | single-orange ACT | coupled chunk/execution sweep | Is local control horizon the bottleneck? |
 
 The word “oracle” is intentionally narrow. A1 full-task inference uses fixed
 time boundaries and is not a success oracle. A2 receives a privileged stage
@@ -159,10 +159,10 @@ This distinction matters: isolated success quantifies primitive capability in
 a controlled start-state distribution, not the probability that three
 primitives will succeed in sequence.
 
-### 3.4 SingleOrange horizon sweep
+### 3.4 SingleOrange coupled chunk/execution horizon sweep
 
-Orange001 was trained/evaluated as a standalone primitive with chunk/action
-horizons 25, 50 and 100.
+Orange001 was trained/evaluated as a standalone primitive with coupled chunk
+and execution horizons of 25, 50 and 100.
 
 | Horizon | Success |
 |---:|---:|
@@ -385,9 +385,10 @@ The evidence supports six measured conclusions:
 4. Dataset semantics materially affect the experiment. A small nominal dataset
    required strict-prefix filtering and exposure accounting at the frame/window
    level.
-5. In the fixed-K B1 inference ablation, shorter replanning horizons did not
-   improve observed success; `H*=100` was selected, and cross-H results remain
-   descriptive because initialization pairing failed after episode 0.
+5. In the fixed-K B1 inference ablation without temporal aggregation, shorter
+   execution horizons did not improve observed success; `H*=100` was selected,
+   and cross-H results remain descriptive because initialization pairing failed
+   after episode 0.
 6. Under the later 20-state paired protocol, temporal aggregation recovered
    H=1 from 0/20 to 5/20, matching but not outperforming H=100. This narrows the
    control diagnosis without establishing a generally optimal controller.

@@ -57,8 +57,8 @@ flowchart LR
 
 ## 项目体现的能力
 
-1. **研究设计**：A0/A1/A2/A3、isolated primitives、SingleOrange horizon
-   sweep 和 checkpoint 对比，区分规划、低层控制与阶段衔接问题。
+1. **研究设计**：A0/A1/A2/A3、isolated primitives、SingleOrange 耦合
+   chunk/execution horizon sweep 和 checkpoint 对比，区分规划、低层控制与阶段衔接问题。
 2. **数据工程**：按稳定抓取/放置事件切片，检查目标成功与所有前缀橘子是否
    仍在盘中，而不是把固定帧数当作成功标签。
 3. **评测工程**：显式区分 `native_horizon` 与可选 `matched_horizon`，记录

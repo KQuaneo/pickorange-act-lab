@@ -51,7 +51,7 @@ behind a single success rate.
 | Simulator | Isaac Lab through LeIsaac |
 | Observations | Front RGB + wrist RGB + robot joint state |
 | Actions | 6D direct joint-position targets |
-| Policy | ACT, ResNet-18 visual encoder, chunk/action horizon 100 |
+| Policy | ACT, ResNet-18, prediction chunk `K=100`; primary `H=100`, with post-hoc `H` and temporal-aggregation ablations |
 | Demonstrations | 30 expert episodes, audited after event-based slicing |
 | Final training | Batch 64; A0 42k steps; each A1 primitive 14k steps |
 | Formal evaluation | 20 episodes/configuration, seed 2026, Wilson 95% intervals |
@@ -97,7 +97,7 @@ changes are not hidden:
 | Generation | What was trained | Scientific role |
 |---|---|---|
 | G1 | batch-128 A0/A1/A2; A3 reused A1; 24 train / 6 val | long-task and scheduler ablation |
-| G2 | SingleOrange ACT with horizons 25/50/100 | primitive-control diagnostic |
+| G2 | SingleOrange ACT with coupled chunk/execution horizons 25/50/100 | primitive-control diagnostic |
 | G3 | batch-64 Gate30 A0 21k and A1 7k | historical 340-action protocol + corrected final-checkpoint re-evaluation |
 | G4 | batch-64 A0 42k and strict-prefix A1 14k | primary final benchmark |
 
@@ -183,7 +183,7 @@ stages that reached stable success. No observed prefix was destroyed during
 those overrun intervals. The correlation with next-stage start deviation uses
 only seven pairs and is reported as descriptive—not causal.
 
-### 5. Receding-horizon replanning did not improve B1
+### 5. Shorter execution horizons without temporal aggregation did not improve B1
 
 A post-hoc inference ablation fixed the ACT prediction chunk at `K=100` and
 varied only the number of actions executed before replanning. Every setting
